@@ -20,6 +20,8 @@ class Source:
     start_line: str | None = None
     start_occurrence: int = 1
     end_line: str | None = None
+    # "primary" for the figure's own writings, "biography" for writing about them.
+    kind: str = "primary"
     # Nesting depth of numbered headings ("BOOK I.", "CHAPTER II.") in this text.
     heading_levels: dict[str, int] = field(default_factory=lambda: dict(DEFAULT_HEADING_LEVELS))
     # Depth of unnumbered all-caps titles; 0 means a title starts a new top-level work.

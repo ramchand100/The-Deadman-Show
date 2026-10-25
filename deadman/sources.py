@@ -35,6 +35,7 @@ class Passage:
     year: int
     location: str
     text: str
+    kind: str = "primary"
 
     def citation(self) -> str:
         where = f", {self.location}" if self.location else ""
@@ -165,6 +166,7 @@ def chunk(text: str, source: Source) -> list[Passage]:
             year=source.year,
             location=loc,
             text=text,
+            kind=source.kind,
         ))
 
     def apply_heading() -> None:
@@ -175,12 +177,20 @@ def chunk(text: str, source: Source) -> list[Passage]:
             del levels[k]
         levels[level] = heading
 
+    in_footnotes = False
     for para in _paragraphs(text):
         if _is_structural(para):
             flush()
             if pending:
                 apply_heading()
             pending.append(para)
+            in_footnotes = False
+        elif in_footnotes:
+            continue
+        elif para.upper().startswith("FOOTNOTES"):
+            # Editors' notes run until the next numbered heading.
+            flush()
+            in_footnotes = True
         elif _is_caps_title(para):
             # Multi-line titles and subtitles join the heading in progress.
             flush()

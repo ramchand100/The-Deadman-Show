@@ -75,3 +75,16 @@ url = "https://www.gutenberg.org/cache/epub/58559/pg58559.txt"
 start_line = "THE PRINCIPLES"
 start_occurrence = 1
 end_line = "THE END."
+
+[[sources]]
+id = "rae"
+title = "Life of Adam Smith, by John Rae"
+year = 1895
+url = "https://www.gutenberg.org/cache/epub/17196/pg17196.txt"
+# A biography: gives the persona memories of his life, but its words are Rae's, not Smith's.
+kind = "biography"
+start_line = "CHAPTER I"
+start_occurrence = 2
+end_line = "INDEX"
+heading_levels = { CHAPTER = 1 }
+title_level = 2

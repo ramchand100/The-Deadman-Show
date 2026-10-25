@@ -58,14 +58,27 @@ class FactCheck(BaseModel):
 
 
 @dataclass
+class Chapter:
+    title: str
+    segments: list[Segment]
+
+
+@dataclass
 class Episode:
     figure: Figure
     topic: str
-    plan: EpisodePlan
-    script: Script
+    title: str
+    hook: str
+    chapters: list[Chapter]
     passages: dict[str, Passage]
     issues: list[Issue] = field(default_factory=list)
     fact_check_summary: str = ""
+    # YouTube packaging (title options, clips, cold open); set by the long-form pipeline.
+    packaging: BaseModel | None = None
+
+    @property
+    def segments(self) -> list[Segment]:
+        return [seg for ch in self.chapters for seg in ch.segments]
 
 
 class GenerationError(RuntimeError):
@@ -118,6 +131,12 @@ This episode's guest is {figure.name} ({figure.born}-{figure.died}), {figure.era
 {figure.guidance}
 </knowledge_limits>
 
+Source passages come in two kinds. kind="primary" passages are the guest's own writings. \
+kind="biography" passages were written about the guest by a later biographer: treat the events, \
+people and places in them as the guest's own memories and tell them in the first person, but \
+never present the biographer's sentences as the guest's words. The guest's own letters quoted \
+inside a biography passage are the guest's words and may be quoted.
+
 Rules for the guest's lines:
 - Ground substantive claims in the source passages you are given, and cite the passage ids \
 each line relies on. Paraphrase in the guest's own voice; quote directly only when the words \
@@ -143,9 +162,11 @@ a title and a one-sentence hook for the YouTube description."""
     return _call(client, persona_prompt(figure), user, EpisodePlan, effort="medium")
 
 
-def gather_passages(index: BM25Index, plan: EpisodePlan, k: int = PASSAGES_PER_QUESTION) -> dict[str, Passage]:
+def gather_passages(
+    index: BM25Index, questions: list[PlannedQuestion], k: int = PASSAGES_PER_QUESTION
+) -> dict[str, Passage]:
     found: dict[str, Passage] = {}
-    for q in plan.questions:
+    for q in questions:
         query = " ".join([q.question, *q.search_terms])
         for passage, _ in index.search(query, k=k):
             found.setdefault(passage.id, passage)
@@ -154,7 +175,7 @@ def gather_passages(index: BM25Index, plan: EpisodePlan, k: int = PASSAGES_PER_Q
 
 def _format_passages(passages: dict[str, Passage]) -> str:
     return "\n\n".join(
-        f'<passage id="{p.id}" source="{p.citation()}">\n{p.text}\n</passage>'
+        f'<passage id="{p.id}" kind="{p.kind}" source="{p.citation()}">\n{p.text}\n</passage>'
         for p in passages.values()
     )
 
@@ -192,10 +213,13 @@ def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", "", text.lower())).strip()
 
 
-def mechanical_checks(script: Script, passages: dict[str, Passage]) -> list[Issue]:
-    """Checks that need no model: unknown citations and quotations not found in the sources."""
+def mechanical_checks(segments: list[Segment], passages: dict[str, Passage], offset: int = 0) -> list[Issue]:
+    """Checks that need no model: unknown citations and quotations not found in the sources.
+
+    `offset` is the episode-wide index of segments[0], so issues point at the right segment.
+    """
     issues = []
-    for i, seg in enumerate(script.segments):
+    for i, seg in enumerate(segments, offset):
         if seg.speaker != "GUEST":
             continue
         unknown = [c for c in seg.citations if c not in passages]
@@ -216,11 +240,17 @@ def mechanical_checks(script: Script, passages: dict[str, Passage]) -> list[Issu
     return issues
 
 
-def fact_check(client: anthropic.Anthropic, figure: Figure, script: Script, passages: dict[str, Passage]) -> FactCheck:
-    lines = "\n".join(
+def format_transcript(segments: list[Segment], offset: int = 0) -> str:
+    return "\n".join(
         f"[{i}] {seg.speaker} (cites: {', '.join(seg.citations) or 'none'}): {seg.text}"
-        for i, seg in enumerate(script.segments)
+        for i, seg in enumerate(segments, offset)
     )
+
+
+def fact_check(
+    client: anthropic.Anthropic, figure: Figure, segments: list[Segment], passages: dict[str, Passage], offset: int = 0
+) -> FactCheck:
+    lines = format_transcript(segments, offset)
     system = f"""You are the fact-checker for a history podcast. You review scripts in which an \
 AI recreation of {figure.name} ({figure.born}-{figure.died}) is interviewed. You are strict \
 and specific, and you only flag real problems."""
@@ -231,7 +261,8 @@ Flag:
 after {figure.died} as their own (reacting to something the host just explained is fine).
 - unsupported: a substantive claim about the guest's views that the cited passages do not \
 support, or that misrepresents them.
-- misquote: words presented as a direct quotation that are not in the passages.
+- misquote: words presented as a direct quotation that are not in the passages, or a \
+biographer's sentences presented as the guest's own words.
 - out_of_character: the guest takes a position their own writings contradict.
 
 Use the segment number in brackets. Return an empty issues list if the script is clean.
@@ -259,14 +290,17 @@ def generate_episode(
 ) -> Episode:
     log(f"Planning episode on {topic!r}...")
     plan = plan_episode(client, figure, topic, n_questions)
-    passages = gather_passages(index, plan)
+    passages = gather_passages(index, plan.questions)
     log(f"Retrieved {len(passages)} passages. Writing script...")
     script = write_script(client, figure, topic, plan, passages, minutes, host_name)
-    episode = Episode(figure=figure, topic=topic, plan=plan, script=script, passages=passages)
-    episode.issues = mechanical_checks(script, passages)
+    episode = Episode(
+        figure=figure, topic=topic, title=script.title, hook=plan.hook,
+        chapters=[Chapter(title=script.title, segments=script.segments)], passages=passages,
+    )
+    episode.issues = mechanical_checks(script.segments, passages)
     if run_fact_check:
         log("Fact-checking...")
-        result = fact_check(client, figure, script, passages)
+        result = fact_check(client, figure, script.segments, passages)
         episode.issues.extend(result.issues)
         episode.fact_check_summary = result.summary
     return episode

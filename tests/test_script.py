@@ -53,7 +53,7 @@ def test_mechanical_checks_accepts_verbatim_quotes():
     script = Script(title="t", segments=[
         guest('As I wrote, "people of the same trade seldom meet together" without mischief.', "won-0001"),
     ])
-    assert mechanical_checks(script, PASSAGES) == []
+    assert mechanical_checks(script.segments, PASSAGES) == []
 
 
 def test_mechanical_checks_flags_invented_quotes_and_unknown_ids():
@@ -62,8 +62,8 @@ def test_mechanical_checks_flags_invented_quotes_and_unknown_ids():
         guest('I always said "greed is good, always and everywhere".', "won-0001"),
         guest("Pins, sir, pins.", "won-9999"),
     ])
-    issues = mechanical_checks(script, PASSAGES)
-    assert [(i.segment, i.kind) for i in issues] == [(1, "misquote"), (2, "unsupported")]
+    issues = mechanical_checks(script.segments, PASSAGES, offset=10)
+    assert [(i.segment, i.kind) for i in issues] == [(11, "misquote"), (12, "unsupported")]
 
 
 def test_generate_episode_runs_plan_write_and_fact_check():
@@ -82,7 +82,7 @@ def test_generate_episode_runs_plan_write_and_fact_check():
 
     ep = generate_episode(client, figure, BM25Index(list(PASSAGES.values())), "pins", log=lambda *_: None)
 
-    assert ep.script == script
+    assert ep.segments == script.segments and ep.title == "Smith on Pins"
     assert "won-0002" in ep.passages
     assert len(client.requests) == 3
     write_prompt = client.requests[1]["messages"][0]["content"]

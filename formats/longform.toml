@@ -1,0 +1,116 @@
+name = "longform"
+description = "A long, wide-ranging conversation in the style of today's big interview podcasts."
+
+style = """
+This is a long-form conversation, not a quiz. Let it breathe: the guest tells stories with \
+concrete detail, answers can run long when the story is good, and the host follows tangents \
+when they are interesting. The host is a real presence: warm, curious, sometimes funny, \
+occasionally shares a short personal reaction or experience, and pushes back respectfully \
+when an answer seems too easy. Mix light and heavy moments. Avoid lecture-style answers; \
+the guest should sound like a person talking, not a book being read aloud. Each chapter \
+should contain at least one moment strong enough to stand alone as a short clip: a surprising \
+story, a sharp line, an emotional admission, or a disagreement.
+"""
+
+# The guest's question for the next guest becomes the show's running tradition.
+tradition = """
+Show tradition: at the very end, the guest leaves a question for the next dead guest, \
+written down without knowing who it will be.
+"""
+
+[[chapters]]
+id = "welcome"
+title = "Welcome to the future"
+minutes = 4
+goal = "Disclosure, rapport, and the guest's first reactions to the modern world."
+beats = [
+  "Host gives the AI-recreation disclosure naturally, in their own words.",
+  "Host tells the guest one or two things about today's world; the guest reacts with curiosity, humour or disbelief.",
+  "Host previews what the conversation will cover.",
+]
+
+[[chapters]]
+id = "origins"
+title = "Where it all began"
+minutes = 8
+goal = "Childhood, family and formative years, told as stories."
+beats = [
+  "Family background and early losses.",
+  "Childhood memories and odd incidents.",
+  "Education, teachers who mattered, and what the guest hated.",
+]
+
+[[chapters]]
+id = "making"
+title = "Becoming who they were"
+minutes = 8
+goal = "The career path: lucky breaks, setbacks, the people met along the way, and how the major work got made."
+beats = [
+  "First jobs and how the guest got them.",
+  "Travel, famous people met, and what they were really like.",
+  "How the great work was written: years, doubts, habits.",
+]
+
+[[chapters]]
+id = "ideas"
+title = "The big ideas, simply"
+minutes = 10
+goal = "Explain the core ideas plainly, and correct what people most often get wrong about the guest."
+beats = [
+  "Host asks for the core idea as if explaining to a teenager.",
+  "Host raises the popular misconception; guest corrects it with their own words.",
+  "One idea the guest thinks is underrated.",
+]
+
+[[chapters]]
+id = "personal"
+title = "Friendship, love and loss"
+minutes = 8
+goal = "The guest's inner life: friendships, love, family, grief."
+beats = [
+  "Closest friendships and what made them work.",
+  "Love, marriage or the lack of it; family ties.",
+  "A loss that changed them.",
+]
+
+[[chapters]]
+id = "life"
+title = "Money, success and happiness"
+minutes = 8
+goal = "Practical life wisdom from the guest's own writings: ambition, wealth, reputation, what makes a good life."
+beats = [
+  "What chasing wealth and status does to a person.",
+  "What actually makes people happy, in the guest's view.",
+  "Advice to a young person starting a career today.",
+]
+
+[[chapters]]
+id = "today"
+title = "Hot takes on today"
+minutes = 8
+goal = "A faster round on modern topics. The host explains each briefly; the guest reasons from their principles and says plainly what is new to them."
+beats = [
+  "Four to six quick topics, chosen to suit this guest.",
+  "At least one topic where the guest's answer would surprise the audience.",
+]
+
+[[chapters]]
+id = "legacy"
+title = "Regrets and legacy"
+minutes = 5
+goal = "What the guest got wrong, unfinished work, and how they want to be remembered."
+beats = [
+  "Something the guest would change or regrets.",
+  "How the guest feels about their reputation today.",
+]
+
+[[chapters]]
+id = "closing"
+title = "The last question"
+minutes = 3
+goal = "Closing advice, the show tradition, and goodbye."
+beats = [
+  "Host asks for one piece of advice for the audience.",
+  "The guest writes a question for the next dead guest.",
+  "Host thanks the guest, repeats the AI disclosure in one line, and signs off.",
+]

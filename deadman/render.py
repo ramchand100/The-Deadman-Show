@@ -1,4 +1,4 @@
-"""Write an episode to disk as a readable script (Markdown) and machine-readable JSON."""
+"""Write an episode to disk as a readable script (Markdown), a YouTube description, and JSON."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from dataclasses import asdict
 from datetime import date
 from pathlib import Path
 
-from .script import Episode
+from .script import WORDS_PER_MINUTE, Episode
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
 
@@ -17,24 +17,82 @@ def slugify(text: str, max_len: int = 50) -> str:
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:max_len].rstrip("-")
 
 
+def _timestamp(words: int) -> str:
+    seconds = round(words / WORDS_PER_MINUTE * 60)
+    h, rest = divmod(seconds, 3600)
+    m, s = divmod(rest, 60)
+    return f"{h}:{m:02d}:{s:02d}" if h else f"{m}:{s:02d}"
+
+
+def chapter_timestamps(ep: Episode) -> list[tuple[str, str]]:
+    """Estimated start time of each chapter, from spoken word counts (cold open included)."""
+    words = 0
+    if ep.packaging:
+        words = sum(len(s.text.split()) for s in _cold_open(ep))
+    stamps = []
+    for ch in ep.chapters:
+        stamps.append((_timestamp(words), ch.title))
+        words += sum(len(s.text.split()) for s in ch.segments)
+    stamps[0] = ("0:00", stamps[0][1])
+    return stamps
+
+
+def _cold_open(ep: Episode):
+    p = ep.packaging
+    return ep.segments[p.cold_open_start: p.cold_open_end + 1] if p else []
+
+
+def _source_numbers(ep: Episode) -> dict[str, int]:
+    cited = [c for seg in ep.segments for c in seg.citations if c in ep.passages]
+    return {pid: n for n, pid in enumerate(dict.fromkeys(cited), 1)}
+
+
+def _sources_list(ep: Episode, numbers: dict[str, int]) -> list[str]:
+    lines = []
+    for pid, n in numbers.items():
+        p = ep.passages[pid]
+        note = " (biography)" if p.kind == "biography" else ""
+        lines.append(f"{n}. {p.citation()}{note} — passage `{pid}`")
+    return lines
+
+
 def to_markdown(ep: Episode, host_name: str = "Host") -> str:
     speakers = {"HOST": host_name.upper(), "GUEST": ep.figure.speaker_label}
-    cited = [c for seg in ep.script.segments for c in seg.citations if c in ep.passages]
-    numbers = {pid: n for n, pid in enumerate(dict.fromkeys(cited), 1)}
+    numbers = _source_numbers(ep)
+    words = sum(len(s.text.split()) for s in ep.segments)
 
-    out = [f"# {ep.script.title}", "", f"*{ep.plan.hook}*", "",
-           f"Guest: {ep.figure.name} (AI recreation) · Topic: {ep.topic}", ""]
+    def line(seg) -> str:
+        refs = "".join(f"[{numbers[c]}]" for c in seg.citations if c in numbers)
+        return f"**{speakers[seg.speaker]}:** {seg.text}{' ' + refs if refs else ''}"
+
+    out = [f"# {ep.title}", "", f"*{ep.hook}*", "",
+           f"Guest: {ep.figure.name} (AI recreation) · Host: {host_name} · "
+           f"~{words:,} words, about {round(words / WORDS_PER_MINUTE)} minutes", ""]
     if ep.issues:
         out += [f"> **Review needed:** {len(ep.issues)} fact-check issue(s). See the end of this file.", ""]
-    out += ["## Script", ""]
-    for seg in ep.script.segments:
-        refs = "".join(f"[{numbers[c]}]" for c in seg.citations if c in numbers)
-        out += [f"**{speakers[seg.speaker]}:** {seg.text}{' ' + refs if refs else ''}", ""]
 
-    out += ["## Sources", ""]
-    for pid, n in numbers.items():
-        out.append(f"{n}. {ep.passages[pid].citation()} — passage `{pid}`")
-    out.append("")
+    multi = len(ep.chapters) > 1
+    if multi:
+        out += ["## Chapters", ""] + [f"- {t} {title}" for t, title in chapter_timestamps(ep)] + [""]
+    if ep.packaging:
+        out += ["## Cold open", "", "*(Played before the intro.)*", ""]
+        out += [x for seg in _cold_open(ep) for x in (line(seg), "")]
+
+    out += ["## Script", ""]
+    for ch in ep.chapters:
+        if multi:
+            out += [f"### {ch.title}", ""]
+        out += [x for seg in ch.segments for x in (line(seg), "")]
+
+    if p := ep.packaging:
+        out += ["## YouTube packaging", "", "**Title options**", ""] + [f"- {t}" for t in p.title_options]
+        out += ["", "**Thumbnail text**", ""] + [f"- {t}" for t in p.thumbnail_text]
+        out += ["", "**Clips for Shorts**", ""]
+        for c in p.clips:
+            out.append(f"- **{c.title}** (segments {c.start_segment}-{c.end_segment}): {c.why}")
+        out.append("")
+
+    out += ["## Sources", ""] + _sources_list(ep, numbers) + [""]
 
     out += ["## Fact check", ""]
     if ep.fact_check_summary:
@@ -48,12 +106,33 @@ def to_markdown(ep: Episode, host_name: str = "Host") -> str:
     return "\n".join(out) + "\n"
 
 
+def youtube_description(ep: Episode) -> str:
+    """Paste-ready description: summary, chapter timestamps and the sources."""
+    numbers = _source_numbers(ep)
+    out = [ep.packaging.description if ep.packaging else ep.hook, ""]
+    if len(ep.chapters) > 1:
+        out += ["Chapters:"] + [f"{t} {title}" for t, title in chapter_timestamps(ep)] + [""]
+    out.append("Sources (public domain, via Project Gutenberg):")
+    seen = []
+    for pid in numbers:
+        p = ep.passages[pid]
+        work = f"{p.title} ({p.year})"
+        if work not in seen:
+            seen.append(work)
+    out += [f"- {w}" for w in seen]
+    out += ["", f"{ep.figure.name} in this video is an AI recreation, not the real person. The answers are "
+            "generated, grounded in the writings and biography listed above."]
+    return "\n".join(out) + "\n"
+
+
 def to_json(ep: Episode) -> dict:
     return {
         "figure": ep.figure.slug,
         "topic": ep.topic,
-        "plan": ep.plan.model_dump(),
-        "script": ep.script.model_dump(),
+        "title": ep.title,
+        "hook": ep.hook,
+        "chapters": [{"title": ch.title, "segments": [s.model_dump() for s in ch.segments]} for ch in ep.chapters],
+        "packaging": ep.packaging.model_dump() if ep.packaging else None,
         "passages": {pid: asdict(p) for pid, p in ep.passages.items()},
         "fact_check": {
             "summary": ep.fact_check_summary,
@@ -62,9 +141,10 @@ def to_json(ep: Episode) -> dict:
     }
 
 
-def save(ep: Episode, host_name: str = "Host", output_dir: Path = OUTPUT_DIR) -> Path:
-    folder = output_dir / ep.figure.slug / f"{date.today():%Y-%m-%d}-{slugify(ep.topic)}"
+def save(ep: Episode, host_name: str = "Host", output_dir: Path = OUTPUT_DIR, folder_name: str | None = None) -> Path:
+    folder = output_dir / ep.figure.slug / (folder_name or f"{date.today():%Y-%m-%d}-{slugify(ep.title)}")
     folder.mkdir(parents=True, exist_ok=True)
     (folder / "script.md").write_text(to_markdown(ep, host_name), encoding="utf-8")
+    (folder / "youtube-description.txt").write_text(youtube_description(ep), encoding="utf-8")
     (folder / "episode.json").write_text(json.dumps(to_json(ep), indent=2, ensure_ascii=False), encoding="utf-8")
     return folder

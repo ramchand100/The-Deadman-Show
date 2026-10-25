@@ -46,5 +46,6 @@ def test_tidy_heading():
 def test_adam_smith_config_loads():
     smith = load_figure("adam_smith")
     assert smith.died == 1790
-    assert {s.id for s in smith.sources} == {"won", "tms", "essays"}
+    assert {s.id for s in smith.sources} == {"won", "tms", "essays", "rae"}
     assert smith.source("won").heading_levels["PART"] == 3
+    assert smith.source("rae").kind == "biography"
