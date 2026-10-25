@@ -34,7 +34,7 @@ export ANTHROPIC_API_KEY=sk-ant-...   # or sign in with `ant auth login`
 ### Usage
 
 ```bash
-# One-time: download and index Adam Smith's writings (~1,800 passages)
+# One-time: download and index Adam Smith's writings and biography (~2,300 passages)
 python -m deadman ingest adam_smith
 
 # Optional: check what the search finds
@@ -55,6 +55,10 @@ The episode goes to `output/adam_smith/<date>-<title>/`:
 - `youtube-description.txt`: ready to paste, with chapter timestamps and sources.
 - `episode.json`: everything above as data, for the voice and video stages that come next.
 
+Options for `episode`: `--host NAME`, `--themes "..."`, `--format NAME` (default `longform`),
+`--no-fact-check`. Options for `script`: `--questions N` (default 6), `--minutes N` (default 10),
+`--host NAME`, `--no-fact-check`.
+
 ### Long-form format
 
 `formats/longform.toml` sets the running order: welcome, origins, career, big ideas,
@@ -72,9 +76,6 @@ Each figure has two kinds of source. **Primary** sources are their own writings.
 memories of its life. The guest tells those events in the first person but never quotes the
 biographer's sentences as its own. The figure's own letters, as quoted in the biography, may
 be quoted.
-
-Options for `script`: `--questions N` (default 6), `--minutes N` (default 10),
-`--host NAME`, `--no-fact-check`.
 
 ### Adding a figure
 
