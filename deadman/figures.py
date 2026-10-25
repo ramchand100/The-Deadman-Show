@@ -41,6 +41,10 @@ class Figure:
     guidance: str
     views: list[str] = field(default_factory=list)
     sources: list[Source] = field(default_factory=list)
+    # How the guest looks in the studio (portrait prompt, reference images, asset paths).
+    look: dict = field(default_factory=dict)
+    # Text-to-speech voice: ElevenLabs voice id, a description for designing it, settings.
+    tts: dict = field(default_factory=dict)
 
     def source(self, source_id: str) -> Source:
         for s in self.sources:

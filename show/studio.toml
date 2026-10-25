@@ -1,0 +1,61 @@
+# The Deadman Show studio. Everything here stays the same in every episode;
+# only the guest (figures/<slug>.toml [look] and [voice]) changes.
+# Positions and sizes are in pixels on the 1920x1080 canvas.
+
+[canvas]
+width = 1920
+height = 1080
+fps = 30
+
+[set]
+# The empty studio, generated once (see show/studio.md) and reused forever.
+plate = "assets/studio/plate.png"
+# Placement rule for every avatar: host in the LEFT chair facing right,
+# guest in the RIGHT chair facing left.
+
+[avatar]
+# Avatar tools render on a green screen; the set is keyed in behind them,
+# so the studio is pixel-identical in every episode whatever the tool does.
+key_color = "0x00FF00"
+key_similarity = 0.30
+key_blend = 0.08
+
+[shots]
+# Close-up: the speaker fills their side of the frame over a softened set.
+closeup_height = 980
+closeup_host_x = 120        # left edge of the host's close-up
+closeup_guest_x = 800       # left edge of the guest's close-up
+closeup_background_blur = 12
+# Wide two-shot: both people in their chairs on the sharp set.
+wide_height = 560
+wide_host_x = 260
+wide_guest_x = 1120
+wide_y = 420
+# Editing rhythm: cut to the wide shot at each chapter start, every N speaker
+# changes, and for short reactions.
+wide_every = 6
+wide_if_words_under = 6
+
+[brand]
+show_name = "THE DEADMAN SHOW"
+font = "assets/fonts/Inter-SemiBold.otf"
+font_serif = "assets/fonts/DejaVuSerif-Bold.ttf"
+accent = "0x1FA39A"          # deep teal
+text = "0xF4EDE1"            # warm white
+panel = "0x101418"           # near-black
+# Name cards appear for this many seconds at a speaker's first line in each chapter.
+lower_third_seconds = 5
+chapter_card_seconds = 3.5
+
+[host]
+name = "Ram"
+title = "Host"
+# Ram's real likeness and voice, used with his consent.
+portrait = "assets/host/portrait.png"     # still used for placeholders and the wide shot
+voice_id = ""                              # ElevenLabs voice id of Ram's voice clone
+
+[audio]
+model_id = "eleven_multilingual_v2"
+output_format = "mp3_44100_128"
+pause_between_turns = 0.35   # seconds
+pause_between_chapters = 1.0

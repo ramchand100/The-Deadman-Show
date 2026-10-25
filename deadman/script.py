@@ -75,6 +75,8 @@ class Episode:
     fact_check_summary: str = ""
     # YouTube packaging (title options, clips, cold open); set by the long-form pipeline.
     packaging: BaseModel | None = None
+    # Exact line timings from `deadman audio` (audio/timings.json), when the audio is current.
+    timings: dict | None = None
 
     @property
     def segments(self) -> list[Segment]:

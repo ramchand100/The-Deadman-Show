@@ -14,14 +14,27 @@ def slugify(text: str, max_len: int = 50) -> str:
 
 
 def _timestamp(words: int) -> str:
-    seconds = round(words / WORDS_PER_MINUTE * 60)
+    return _clock(words / WORDS_PER_MINUTE * 60)
+
+
+def _clock(seconds: float) -> str:
+    seconds = round(seconds)
     h, rest = divmod(seconds, 3600)
     m, s = divmod(rest, 60)
     return f"{h}:{m:02d}:{s:02d}" if h else f"{m}:{s:02d}"
 
 
 def chapter_timestamps(ep: Episode) -> list[tuple[str, str]]:
-    """Estimated start time of each chapter, from spoken word counts (cold open included)."""
+    """Start time of each chapter (cold open included): exact from the audio timings when
+    they exist, otherwise estimated from word counts."""
+    if ep.timings:
+        starts: dict[str, float] = {}
+        for line in ep.timings["lines"]:
+            if not line["cold_open"]:
+                starts.setdefault(line["chapter"], line["start"])
+        stamps = [(_clock(starts.get(ch.title, 0)), ch.title) for ch in ep.chapters]
+        stamps[0] = ("0:00", stamps[0][1])
+        return stamps
     words = 0
     if ep.packaging:
         words = sum(len(s.text.split()) for s in _cold_open(ep))
@@ -71,8 +84,9 @@ def to_markdown(ep: Episode, host_name: str = "Host") -> str:
 
     out = ["<!-- Generated from transcript.md by `deadman render`. Edit transcript.md, not this file. -->", "",
            f"# {ep.title}", "", f"*{ep.hook}*", "",
-           f"Guest: {ep.figure.name} (AI recreation) · Host: {host_name} · "
-           f"~{words:,} words, about {round(words / WORDS_PER_MINUTE)} minutes", ""]
+           f"Guest: {ep.figure.name} (AI recreation) · Host: {host_name} · " + (
+               f"{words:,} words, runs {_clock(ep.timings['duration'])}" if ep.timings
+               else f"~{words:,} words, about {round(words / WORDS_PER_MINUTE)} minutes"), ""]
     if ep.issues:
         out += [f"> **Review needed:** {len(ep.issues)} fact-check issue(s). See the end of this file.", ""]
 

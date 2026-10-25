@@ -82,6 +82,35 @@ python -m deadman script adam_smith "Would Adam Smith approve of Amazon?" --host
 warns about episodes far below the format's length, empty chapters, long uncited guest lines
 and repeated quotes.
 
+### Audio and video
+
+The studio never changes; only the guest does. `show/studio.toml` fixes the set, camera
+shots, colours, fonts, name cards and Ram's voice; each guest adds a portrait and an
+ElevenLabs voice in the `[look]` and `[tts]` sections of their figure file. One-time setup
+(studio image, Ram's voice clone and avatar, prompts for each guest) is in `show/studio.md`.
+
+```bash
+python -m deadman placeholders adam_smith    # stand-in art until the real assets exist
+python -m deadman audio 2 --estimate         # characters to voice, before spending credits
+python -m deadman audio 2                    # ElevenLabs, one file per line (needs ELEVENLABS_API_KEY)
+python -m deadman audio 2 --placeholder      # silent, speech-timed audio to test video
+python -m deadman video 2 --preview 12       # the first 12 lines, quickly
+python -m deadman video 2                    # the full episode: video/episode.mp4
+```
+
+- **Audio:** each line is voiced separately and cached, so after editing the transcript only
+  the changed lines are re-voiced and paid for. Writes `audio/episode.mp3` (cold open first),
+  `audio/timings.json` and `captions.srt`. After real audio, `render` uses exact chapter
+  timestamps.
+- **Video:** for each line the editor picks a close-up of the speaker or the wide two-shot
+  (chapter starts, short reactions, every few turns), keys the speaker onto the studio plate,
+  and adds the corner logo, name cards and chapter cards. A line uses its avatar clip,
+  `video/avatars/NNNN.mp4` (made by your avatar tool from `audio/segments/NNNN-*.mp3` on a
+  green screen), or the speaker's still portrait until that clip exists.
+- `video` warns while placeholder art or placeholder audio is in use. Needs `ffmpeg`.
+
+Audio and video files are not committed to git.
+
 ### Long-form format
 
 `formats/longform.toml` sets the running order: welcome, origins, career, big ideas,

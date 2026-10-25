@@ -11,6 +11,10 @@ grounded in their own writings. This repo holds the pipeline and every episode.
   `python -m deadman render <NNN>`. Never edit generated files by hand.
 - **Checks:** `python -m deadman check <NNN>` must report 0 errors before rendering.
   Direct quotes must be verbatim from a cited passage (`python -m deadman show <figure> <id>`).
+- **Audio/video:** `python -m deadman audio <NNN>` (ElevenLabs, needs `ELEVENLABS_API_KEY`;
+  `--placeholder` for silent test audio), then `python -m deadman video <NNN>`. The studio is
+  fixed in `show/studio.toml`; only the guest's `[look]`/`[tts]` change. Setup: `show/studio.md`.
+  Never change the studio settings per episode.
 
 ## Setup in a fresh session
 
@@ -20,5 +24,5 @@ python -m deadman ingest adam_smith     # data/ is not committed; ingest each fi
 python -m pytest
 ```
 
-The `episode` and `script` commands call the Claude API and need `ANTHROPIC_API_KEY`.
+Video needs `ffmpeg`. The `episode` and `script` commands call the Claude API and need `ANTHROPIC_API_KEY`.
 Without a key, episodes are made in-session with the skills and agents above.

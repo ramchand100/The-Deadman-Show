@@ -76,8 +76,13 @@ def cmd_render(args: argparse.Namespace) -> None:
     from .episodes import check_episode, load_episode, resolve_folder
     from .render import save
 
+    from .audio import load_timings
+
     folder = resolve_folder(args.episode)
     episode, brief = load_episode(folder)
+    timings = load_timings(folder, episode)
+    # Silent placeholder audio only approximates timing; never publish timestamps from it.
+    episode.timings = timings if timings and timings["engine"] != "placeholder" else None
     report = check_episode(episode, brief)
     _print_report(report)
     if report.errors and not args.force:
@@ -90,6 +95,67 @@ def cmd_render(args: argparse.Namespace) -> None:
     )
     save(episode, brief.host, folder)
     print(f"Rendered {folder / 'script.md'}")
+
+
+def cmd_audio(args: argparse.Namespace) -> None:
+    from .audio import AudioError, ElevenLabs, Placeholder, build_audio, estimate, load_studio, voices_for
+    from .episodes import load_episode, resolve_folder
+
+    folder = resolve_folder(args.episode)
+    episode, brief = load_episode(folder)
+    studio = load_studio()
+    model_id = studio["audio"]["model_id"]
+    voices = voices_for(episode.figure, studio)
+    if args.estimate:
+        e = estimate(episode, folder, voices, model_id)
+        print(f"{e['lines']} lines, {e['characters']:,} characters in total; "
+              f"{e['new_characters']:,} characters not yet voiced.")
+        print("ElevenLabs bills by character: compare with your plan's monthly character quota.")
+        return
+    try:
+        engine = Placeholder() if args.placeholder else ElevenLabs(model_id, studio["audio"]["output_format"])
+        timings = build_audio(episode, folder, engine, voices, studio)
+    except AudioError as e:
+        sys.exit(f"Error: {e}")
+    minutes, seconds = divmod(round(timings["duration"]), 60)
+    print(f"Wrote {folder / 'audio' / 'episode.mp3'} ({minutes}:{seconds:02d}) and captions.srt")
+    if args.placeholder:
+        print("Placeholder audio is silent; it only sets timing for building and testing video.")
+    print(f"Run `python -m deadman render {brief.number}` to update chapter timestamps.")
+
+
+def cmd_placeholders(args: argparse.Namespace) -> None:
+    from .audio import load_studio
+    from .video import make_placeholders
+
+    made = make_placeholders(load_figure(args.figure), load_studio())
+    for path in made:
+        print(f"Created placeholder {path}")
+    if not made:
+        print("All studio assets already exist; nothing to do.")
+
+
+def cmd_video(args: argparse.Namespace) -> None:
+    from .audio import load_studio, load_timings
+    from .episodes import load_episode, resolve_folder
+    from .video import VideoError, build_video, placeholder_assets
+
+    folder = resolve_folder(args.episode)
+    episode, brief = load_episode(folder)
+    timings = load_timings(folder, episode)
+    if timings is None:
+        sys.exit(f"Error: no current audio. Run `python -m deadman audio {brief.number}` first "
+                 "(add --placeholder to test without voices).")
+    studio = load_studio()
+    for path in placeholder_assets(episode, studio):
+        print(f"warning: still using placeholder art {path} (see show/studio.md)")
+    if timings["engine"] == "placeholder":
+        print("warning: audio is a silent placeholder; run `deadman audio` with ElevenLabs for the real episode")
+    try:
+        out = build_video(episode, folder, timings, studio, preview=args.preview, scale=args.scale)
+    except VideoError as e:
+        sys.exit(f"Error: {e}")
+    print(f"Wrote {out}")
 
 
 def _generate(args: argparse.Namespace, fmt_name: str, build) -> None:
@@ -191,6 +257,23 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("episode", help="Episode number, folder name or path")
     p.add_argument("--force", action="store_true", help="Render even if checks report errors")
     p.set_defaults(func=cmd_render)
+
+    p = sub.add_parser("audio", help="Voice an episode with ElevenLabs (needs ELEVENLABS_API_KEY)")
+    p.add_argument("episode", help="Episode number, folder name or path")
+    p.add_argument("--estimate", action="store_true", help="Only count characters to voice; spends nothing")
+    p.add_argument("--placeholder", action="store_true",
+                   help="Silent audio timed like speech, to build and test video without voices")
+    p.set_defaults(func=cmd_audio)
+
+    p = sub.add_parser("placeholders", help="Create stand-in studio and portrait images for missing assets")
+    p.add_argument("figure", help="Guest whose portrait to create if missing")
+    p.set_defaults(func=cmd_placeholders)
+
+    p = sub.add_parser("video", help="Assemble the episode video in the studio (after `audio`)")
+    p.add_argument("episode", help="Episode number, folder name or path")
+    p.add_argument("--preview", type=int, default=0, metavar="N", help="Only the first N lines, fast")
+    p.add_argument("--scale", type=float, default=1.0, help="Render size, e.g. 0.5 for a quick 960x540 draft")
+    p.set_defaults(func=cmd_video)
 
     p = sub.add_parser("script", help="[API] Generate a short single-topic episode")
     p.add_argument("figure")

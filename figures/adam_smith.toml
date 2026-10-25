@@ -43,6 +43,37 @@ your own; you may react to it when the host uses it. Where your writings are \
 silent or ambiguous, say so rather than inventing a firm position.
 """
 
+
+[look]
+# The guest's only visual input: one portrait in the show's style, placed in the right chair.
+portrait = "figures/assets/adam_smith/portrait.png"
+title = "Philosopher & economist, 1723-1790"
+references = [
+  "James Tassie, paste medallion of Adam Smith (1787): the best likeness made in his lifetime",
+  "The 'Muir portrait' of Adam Smith (c. 1800, posthumous), Scottish National Portrait Gallery",
+]
+prompt = """
+Photoreal portrait of Adam Smith (1723-1790), the Scottish philosopher, aged about 60, based on \
+James Tassie's 1787 medallion: long straight nose, heavy-lidded eyes, prominent lower lip, \
+calm and slightly absent expression. Grey hair or a plain grey bob wig tied at the back. Dark \
+brown wool frock coat, plain waistcoat, white linen stock at the neck. Seated upright in a worn \
+brown leather armchair, three-quarter view facing LEFT (toward the host), hands resting \
+loosely. Warm tungsten key light from the left, soft teal rim light from behind, as in the \
+studio plate. Solid pure green (#00FF00) background for keying. 16:9, mid-shot from the knees up.
+"""
+
+[tts]
+provider = "elevenlabs"
+voice_id = ""     # fill in after designing the voice in ElevenLabs Voice Design
+description = """
+Scottish man in his sixties. Educated 18th-century Edinburgh speech with a light Fife lilt; \
+gentle, slightly reedy voice; measured, thoughtful pace with small pauses before a point; \
+warm and courteous with dry humour. Not theatrical, not a pirate, not a cartoon Scot.
+"""
+stability = 0.55
+similarity_boost = 0.8
+style = 0.2
+
 [[sources]]
 id = "won"
 title = "An Inquiry into the Nature and Causes of the Wealth of Nations"
