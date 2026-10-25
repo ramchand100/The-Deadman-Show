@@ -1,0 +1,406 @@
+{
+  "figure": "adam_smith",
+  "topic": "Would Adam Smith approve of Amazon?",
+  "plan": {
+    "title": "Would Adam Smith Approve of Amazon?",
+    "hook": "The father of economics on warehouses, monopoly, shareholders and the people who pack your parcels, in his own words.",
+    "questions": [
+      {
+        "question": "Amazon's warehouses split work into tiny tasks. Do you recognise this?",
+        "search_terms": [
+          "division of labour",
+          "pin manufactory",
+          "distinct operations"
+        ]
+      },
+      {
+        "question": "Why could a shop this big only appear now?",
+        "search_terms": [
+          "extent of the market",
+          "water-carriage",
+          "porter",
+          "great town"
+        ]
+      },
+      {
+        "question": "Customers love low prices and fast delivery. Is that enough?",
+        "search_terms": [
+          "consumption sole end of production",
+          "benevolence of the butcher",
+          "public good"
+        ]
+      },
+      {
+        "question": "Critics say Amazon is too powerful. Is it a monopoly?",
+        "search_terms": [
+          "price of monopoly",
+          "widen the market narrow the competition",
+          "exclusive privilege"
+        ]
+      },
+      {
+        "question": "Amazon is owned by shareholders and run by managers. What do you make of that?",
+        "search_terms": [
+          "joint-stock company",
+          "directors",
+          "other people's money",
+          "negligence and profusion"
+        ]
+      },
+      {
+        "question": "What about the warehouse workers?",
+        "search_terms": [
+          "torpor of his mind",
+          "education of the common people",
+          "combination of masters",
+          "wages"
+        ]
+      },
+      {
+        "question": "What should government do, and what is your verdict?",
+        "search_terms": [
+          "system of natural liberty",
+          "three duties of the sovereign",
+          "statesman direct capitals"
+        ]
+      }
+    ]
+  },
+  "script": {
+    "title": "Would Adam Smith Approve of Amazon?",
+    "segments": [
+      {
+        "speaker": "HOST",
+        "text": "Welcome to The Deadman Show. I'm Ram. Before we start, the usual honesty: my guest today is an AI recreation of Adam Smith, the Scottish philosopher who died in 1790. His answers are built from his own published writings: The Wealth of Nations, The Theory of Moral Sentiments and his essays. Every claim about his views is cited in the description. When he talks about today's world, that's our recreation reasoning from his principles. The real Smith never saw any of it. Today's question: would Adam Smith approve of Amazon? Dr Smith, welcome.",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "Thank you, Mr Ram. I must say I was disappointed to learn that your Amazon is not the great river of South America but a shop. A shop that names itself after a river. Whatever else may be said of merchants, nobody has ever accused them of modesty.",
+        "citations": []
+      },
+      {
+        "speaker": "HOST",
+        "text": "It started in the 1990s selling books over the internet. Today it sells almost everything. You order on a phone or a computer, and the goods come out of enormous warehouses, often within a day or two. Inside those warehouses the work is split up: one person picks items off shelves, another packs them, another sorts the parcels, and machines move things between them. Do you recognise any of that?",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "I recognise it at once. It is my pin factory, grown to a size I could not have imagined. When I wrote about pin-making, a workman on his own could scarce make one pin a day, and certainly not twenty. But the trade was divided into about eighteen distinct operations. \"One man draws out the wire; another straights it; a third cuts it; a fourth points it.\"",
+        "citations": [
+          "won-0004"
+        ]
+      },
+      {
+        "speaker": "GUEST",
+        "text": "I once saw a small manufactory where ten men made upwards of forty-eight thousand pins in a day. Working separately, they could not each have made twenty. The division of labour, so far as it can be introduced, \"occasions, in every art, a proportionable increase of the productive powers of labour.\" Your warehouse, as you describe it, is that principle carried a very long way.",
+        "citations": [
+          "won-0005"
+        ]
+      },
+      {
+        "speaker": "HOST",
+        "text": "Why do you think something this big could only happen now?",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "Because the division of labour is limited by the extent of the market. Nobody will give himself entirely to one employment if he cannot sell what he makes. A porter can find work only in a great town. In the highlands of Scotland, every farmer must be butcher, baker and brewer for his own family, because there is nobody nearby to trade with.",
+        "citations": [
+          "won-0020"
+        ]
+      },
+      {
+        "speaker": "GUEST",
+        "text": "In my day the great widener of markets was water-carriage. The sea and the navigable rivers were what \"opens the whole world for a market to the produce of every sort of labour.\" If your machines let one shop reach every household in a nation, then you have widened the market beyond anything I knew. I am not surprised that the largest shop is also the most finely divided.",
+        "citations": [
+          "won-0023"
+        ]
+      },
+      {
+        "speaker": "HOST",
+        "text": "People love it because it's cheap and fast. Is that enough to win your approval?",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "It goes a long way. \"Consumption is the sole end and purpose of all production; and the interest of the producer ought to be attended to, only so far as it may be necessary for promoting that of the consumer.\" I spent a great part of my book attacking a system that sacrificed the consumer to the producer. So a dealer who brings goods to the buyer cheaper and sooner is, so far, doing exactly what commerce is for.",
+        "citations": [
+          "won-0833"
+        ]
+      },
+      {
+        "speaker": "GUEST",
+        "text": "Mind you, I would not credit him with doing it out of kindness. \"It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, but from their regard to their own interest.\" And if the gentleman who runs your Amazon tells you he does it all for the public good, I would keep a hand on my purse. \"I have never known much good done by those who affected to trade for the public good.\"",
+        "citations": [
+          "won-0017",
+          "won-0561"
+        ]
+      },
+      {
+        "speaker": "HOST",
+        "text": "Here's the other side, though. Critics say Amazon has become too powerful. Millions of small sellers depend on its marketplace, it charges them fees, and it also sells its own products next to theirs. Regulators in the United States and Europe have taken legal action over how it treats competitors. Amazon disputes that. So, is it a monopoly?",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "I cannot judge facts I have not examined, and my writings do not settle your case. But they do give the questions I would ask. The first is about price. \"The price of monopoly is upon every occasion the highest which can be got.\" Monopolists keep the market understocked and sell far above the natural price, while free competition gives the lowest price sellers can afford. So, are your buyers being squeezed, or served? From what you tell me of its prices, the answer is not obvious.",
+        "citations": [
+          "won-0077"
+        ]
+      },
+      {
+        "speaker": "GUEST",
+        "text": "The second question matters more. \"To widen the market, and to narrow the competition, is always the interest of the dealers.\" Widening the market is often good for the public. Narrowing the competition always works against it. A great dealer who also owns the market-place where his rivals must sell holds a position from which competition could be narrowed. Whether it has been, I would put to your magistrates. But that is exactly where I would look.",
+        "citations": [
+          "won-0332"
+        ]
+      },
+      {
+        "speaker": "HOST",
+        "text": "In your day the big monopolies were companies like the East India Company, which had a royal charter. Amazon has no charter. Anyone can open an online shop.",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "That distinction matters a great deal to me. The monopolies I attacked were mostly made by law: exclusive privileges for trading companies and corporations, and statutes that kept others out of a trade. These are \"a sort of enlarged monopolies.\" A firm that must keep its customers by serving them better than its rivals stands nearer the private adventurer than the chartered company.",
+        "citations": [
+          "won-0077"
+        ]
+      },
+      {
+        "speaker": "GUEST",
+        "text": "So I would watch for the moment it asks the law for help. Of any new law or regulation of commerce proposed by merchants, I wrote that it \"ought never to be adopted till after having been long and carefully examined, not only with the most scrupulous, but with the most suspicious attention.\" When great dealers write rules for their trade, the rules have a way of serving the dealers rather than the public.",
+        "citations": [
+          "won-0332"
+        ]
+      },
+      {
+        "speaker": "HOST",
+        "text": "Amazon is a corporation owned by shareholders and run by professional managers. I gather you had opinions about that kind of company.",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "I did, and they were not flattering. In a joint-stock company the directors are \"the managers rather of other people's money than of their own,\" so they cannot be expected to watch over it as a partner watches his own. \"Negligence and profusion, therefore, must always prevail, more or less, in the management of the affairs of such a company.\" I added that joint-stock companies for foreign trade have very seldom succeeded without an exclusive privilege.",
+        "citations": [
+          "won-0938"
+        ]
+      },
+      {
+        "speaker": "GUEST",
+        "text": "So I must be candid. By your account, here is a joint-stock company that has prospered against all comers without any exclusive privilege. My writings expected otherwise. Either your age has found better ways of making managers mind other people's money, or I was wrong on the point. I would want to study it before I said which.",
+        "citations": []
+      },
+      {
+        "speaker": "HOST",
+        "text": "Let's talk about the workers. Warehouse jobs at Amazon have been heavily criticised: repetitive work, pace set by computers, injury rates. Amazon says it pays above the minimum wage in many places and has invested heavily in safety. Some workers have tried to form unions. What would you say?",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "Two things. First, I never pretended the division of labour was free of cost. The man whose whole life is spent in a few simple operations has no occasion to exert his understanding, and \"generally becomes as stupid and ignorant as it is possible for a human creature to become.\" Hard words, but they are mine. His dexterity at his trade is gained \"at the expense of his intellectual, social, and martial virtues,\" unless government takes some pains to prevent it.",
+        "citations": [
+          "won-0986"
+        ]
+      },
+      {
+        "speaker": "GUEST",
+        "text": "My remedy was education: a little school in every parish, cheap enough for a common labourer to afford, teaching reading, writing, accounts, and some geometry and mechanics. What the equivalent would be for your warehouse workers, I leave to you. The principle stands: a society that profits from narrowing men's work owes some care to widening their minds.",
+        "citations": [
+          "won-0990"
+        ]
+      },
+      {
+        "speaker": "GUEST",
+        "text": "Second, on wages. \"Masters are always and everywhere in a sort of tacit, but constant and uniform, combination, not to raise the wages of labour above their actual rate.\" We hear of workmen combining because they make a noise about it. The masters combine in silence. In my day the law was not even-handed either: \"We have no acts of parliament against combining to lower the price of work, but many against combining to raise it.\" So I would not dismiss the workmen's complaints as mere clamour. I would ask whether your laws treat both sides alike.",
+        "citations": [
+          "won-0083",
+          "won-0082"
+        ]
+      },
+      {
+        "speaker": "HOST",
+        "text": "So what should government do about a company like this?",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "Not run it. A statesman who tries to direct people in how to employ their capital assumes an authority that could safely be trusted to no council or senate whatever. Under what I called the system of natural liberty, every man, \"as long as he does not violate the laws of justice,\" is free to pursue his own interest his own way. The sovereign has three duties: defence; protecting every member of society from the injustice or oppression of every other member; and certain public works and institutions.",
+        "citations": [
+          "won-0562",
+          "won-0869"
+        ]
+      },
+      {
+        "speaker": "GUEST",
+        "text": "The second duty is the one your question turns on. Government's business with your Amazon is not to tell it what to sell. It is to see that nobody, however large, oppresses buyers, rivals or workmen, and that the road to competition stays open.",
+        "citations": [
+          "won-0869"
+        ]
+      },
+      {
+        "speaker": "HOST",
+        "text": "Final verdict, then. Would Adam Smith approve of Amazon?",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "I would approve of the pin factory in it, and of the service to the buyer, for that is the end of all production. I would be suspicious of any dealer, however useful, who is placed to narrow the competition, and doubly suspicious if he asks for laws to help him do it. And I would not forget the men and women at the end of the line, whose minds deserve as much care as their productivity. Approval, then, but with both eyes open. That is how I would treat any merchant.",
+        "citations": [
+          "won-0833",
+          "won-0332"
+        ]
+      },
+      {
+        "speaker": "HOST",
+        "text": "Dr Smith, thank you. That was a fascinating conversation.",
+        "citations": []
+      },
+      {
+        "speaker": "GUEST",
+        "text": "The pleasure was mine, Mr Ram. And do tell your Amazon that if it ever wants a royal charter, the answer should be no.",
+        "citations": []
+      },
+      {
+        "speaker": "HOST",
+        "text": "That's it for this episode of The Deadman Show. Remember, you've been listening to an AI recreation built from Adam Smith's writings. Every passage we drew on is listed in the description, so you can read his own words. I'm Ram. See you next time.",
+        "citations": []
+      }
+    ]
+  },
+  "passages": {
+    "won-0004": {
+      "id": "won-0004",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book I > Chapter I. Of the division of labour",
+      "text": "To take an example, therefore, from a very trifling manufacture, but one in which the division of labour has been very often taken notice of, the trade of a pin-maker: a workman not educated to this business (which the division of labour has rendered a distinct trade), nor acquainted with the use of the machinery employed in it (to the invention of which the same division of labour has probably given occasion), could scarce, perhaps, with his utmost industry, make one pin in a day, and certainly could not make twenty. But in the way in which this business is now carried on, not only the whole work is a peculiar trade, but it is divided into a number of branches, of which the greater part are likewise peculiar trades. One man draws out the wire; another straights it; a third cuts it; a fourth points it; a fifth grinds it at the top for receiving the head; to make the head requires two or three distinct operations; to put it on is a peculiar business; to whiten the pins is another; it is even a trade by itself to put them into the paper; and the important business of making a pin is, in this manner, divided into about eighteen distinct operations, which, in some manufactories, are all performed by distinct hands, though in others the same man will sometimes perform two or three of them."
+    },
+    "won-0005": {
+      "id": "won-0005",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book I > Chapter I. Of the division of labour",
+      "text": "I have seen a small manufactory of this kind, where ten men only were employed, and where some of them consequently performed two or three distinct operations. But though they were very poor, and therefore but indifferently accommodated with the necessary machinery, they could, when they exerted themselves, make among them about twelve pounds of pins in a day. There are in a pound upwards of four thousand pins of a middling size. Those ten persons, therefore, could make among them upwards of forty-eight thousand pins in a day. Each person, therefore, making a tenth part of forty-eight thousand pins, might be considered as making four thousand eight hundred pins in a day. But if they had all wrought separately and independently, and without any of them having been educated to this peculiar business, they certainly could not each of them have made twenty, perhaps not one pin in a day; that is, certainly, not the two hundred and fortieth, perhaps not the four thousand eight hundredth, part of what they are at present capable of performing, in consequence of a proper division and combination of their different operations. In every other art and manufacture, the effects of the division of labour are similar to what they are in this very trifling one, though, in many of them, the labour can neither be so much subdivided, nor reduced to so great a simplicity of operation. The division of labour, however, so far as it can be introduced, occasions, in every art, a proportionable increase of the productive powers of labour. The separation of different trades and employments from one another, seems to have taken place in consequence of this advantage. This separation, too, is generally carried furthest in those countries which enjoy the highest degree of industry and improvement; what is the work of one man, in a rude state of society, being generally that of several in an improved one. In every improved society, the farmer is generally nothing but a farmer; the manufacturer, nothing but a manufacturer. The labour, too, which is necessary to produce any one complete manufacture, is almost always divided among a great number of hands. How many different trades are employed in each branch of the linen and woollen manufactures, from the growers of the flax and the wool, to the bleachers and smoothers of the linen, or to the dyers and dressers of the cloth! The nature of agriculture, indeed, does not admit of so many subdivisions of labour, nor of so complete a separation of one business from another, as manufactures."
+    },
+    "won-0020": {
+      "id": "won-0020",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book I > Chapter III. That the division of labour is limited by the extent of the market",
+      "text": "As it is the power of exchanging that gives occasion to the division of labour, so the extent of this division must always be limited by the extent of that power, or, in other words, by the extent of the market. When the market is very small, no person can have any encouragement to dedicate himself entirely to one employment, for want of the power to exchange all that surplus part of the produce of his own labour, which is over and above his own consumption, for such parts of the produce of other men’s labour as he has occasion for. There are some sorts of industry, even of the lowest kind, which can be carried on nowhere but in a great town. A porter, for example, can find employment and subsistence in no other place. A village is by much too narrow a sphere for him; even an ordinary market-town is scarce large enough to afford him constant occupation. In the lone houses and very small villages which are scattered about in so desert a country as the highlands of Scotland, every farmer must be butcher, baker, and brewer, for his own family. In such situations we can scarce expect to find even a smith, a carpenter, or a mason, within less than twenty miles of another of the same trade. The scattered families that live at eight or ten miles distance from the nearest of them, must learn to perform themselves a great number of little pieces of work, for which, in more populous countries, they would call in the assistance of those workmen. Country workmen are almost everywhere obliged to apply themselves to all the different branches of industry that have so much affinity to one another as to be employed about the same sort of materials. A country carpenter deals in every sort of work that is made of wood; a country smith in every sort of work that is made of iron."
+    },
+    "won-0023": {
+      "id": "won-0023",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book I > Chapter III. That the division of labour is limited by the extent of the market",
+      "text": "There could be little or no commerce of any kind between the distant parts of the world. What goods could bear the expense of land-carriage between London and Calcutta? Or if there were any so precious as to be able to support this expense, with what safety could they be transported through the territories of so many barbarous nations? Those two cities, however, at present carry on a very considerable commerce with each other, and by mutually affording a market, give a good deal of encouragement to each other’s industry. Since such, therefore, are the advantages of water-carriage, it is natural that the first improvements of art and industry should be made where this conveniency opens the whole world for a market to the produce of every sort of labour, and that they should always be much later in extending themselves into the inland parts of the country. The inland parts of the country can for a long time have no other market for the greater part of their goods, but the country which lies round about them, and separates them from the sea-coast, and the great navigable rivers. The extent of the market, therefore, must for a long time be in proportion to the riches and populousness of that country, and consequently their improvement must always be posterior to the improvement of that country. In our North American colonies, the plantations have constantly followed either the sea-coast or the banks of the navigable rivers, and have scarce anywhere extended themselves to any considerable distance from both."
+    },
+    "won-0833": {
+      "id": "won-0833",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book IV > Chapter VIII. Conclusion of the mercantile system",
+      "text": "Consumption is the sole end and purpose of all production; and the interest of the producer ought to be attended to, only so far as it may be necessary for promoting that of the consumer. The maxim is so perfectly self-evident, that it would be absurd to attempt to prove it. But in the mercantile system, the interest of the consumer is almost constantly sacrificed to that of the producer; and it seems to consider production, and not consumption, as the ultimate end and object of all industry and commerce. In the restraints upon the importation of all foreign commodities which can come into competition with those of our own growth or manufacture, the interest of the home consumer is evidently sacrificed to that of the producer. It is altogether for the benefit of the latter, that the former is obliged to pay that enhancement of price which this monopoly almost always occasions. It is altogether for the benefit of the producer, that bounties are granted upon the exportation of some of his productions. The home consumer is obliged to pay, first the tax which is necessary for paying the bounty; and, secondly, the still greater tax which necessarily arises from the enhancement of the price of the commodity in the home market. By the famous treaty of commerce with Portugal, the consumer is prevented by duties from purchasing of a neighbouring country, a commodity which our own climate does not produce; but is obliged to purchase it of a distant country, though it is acknowledged, that the commodity of the distant country is of a worse quality than that of the near one. The home consumer is obliged to submit to this inconvenience, in order that the producer may import into the distant country some of his productions, upon more advantageous terms than he otherwise would have been allowed to do. The consumer, too, is obliged to pay whatever enhancement in the price of those very productions this forced exportation may occasion in the home market."
+    },
+    "won-0017": {
+      "id": "won-0017",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book I > Chapter II. Of the principle which gives occasion to the division of labour",
+      "text": "It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, but from their regard to their own interest. We address ourselves, not to their humanity, but to their self-love, and never talk to them of our own necessities, but of their advantages. Nobody but a beggar chooses to depend chiefly upon the benevolence of his fellow-citizens. Even a beggar does not depend upon it entirely. The charity of well-disposed people, indeed, supplies him with the whole fund of his subsistence. But though this principle ultimately provides him with all the necessaries of life which he has occasion for, it neither does nor can provide him with them as he has occasion for them. The greater part of his occasional wants are supplied in the same manner as those of other people, by treaty, by barter, and by purchase. With the money which one man gives him he purchases food. The old clothes which another bestows upon him he exchanges for other clothes which suit him better, or for lodging, or for food, or for money, with which he can buy either food, clothes, or lodging, as he has occasion. As it is by treaty, by barter, and by purchase, that we obtain from one another the greater part of those mutual good offices which we stand in need of, so it is this same trucking disposition which originally gives occasion to the division of labour. In a tribe of hunters or shepherds, a particular person makes bows and arrows, for example, with more readiness and dexterity than any other. He frequently exchanges them for cattle or for venison, with his companions; and he finds at last that he can, in this manner, get more cattle and venison, than if he himself went to the field to catch them. From a regard to his own interest, therefore, the making of bows and arrows grows to be his chief business, and he becomes a sort of armourer. Another excels in making the frames and covers of their little huts or moveable houses. He is accustomed to be of use in this way to his neighbours, who reward him in the same manner with cattle and with venison, till at last he finds it his interest to dedicate himself entirely to this employment, and to become a sort of house-carpenter. In the same manner a third becomes a smith or a brazier; a fourth, a tanner or dresser of hides or skins, the principal part of the clothing of savages. And thus the certainty of being able to exchange all that surplus part of the produce of his own labour, which is over and above his own consumption, for such parts of the produce of other men’s labour as he may have occasion for, encourages every man to apply himself to a particular occupation, and to cultivate and bring to perfection whatever talent or genius he may possess for that particular species of business."
+    },
+    "won-0561": {
+      "id": "won-0561",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book IV > Chapter II. Of restraints upon importation from foreign countries of such goods as can be produced at home",
+      "text": "Upon equal, or only nearly equal profits, therefore, every individual naturally inclines to employ his capital in the manner in which it is likely to afford the greatest support to domestic industry, and to give revenue and employment to the greatest number of people of his own country. Secondly, every individual who employs his capital in the support of domestic industry, necessarily endeavours so to direct that industry, that its produce may be of the greatest possible value. The produce of industry is what it adds to the subject or materials upon which it is employed. In proportion as the value of this produce is great or small, so will likewise be the profits of the employer. But it is only for the sake of profit that any man employs a capital in the support of industry; and he will always, therefore, endeavour to employ it in the support of that industry of which the produce is likely to be of the greatest value, or to exchange for the greatest quantity either of money or of other goods. But the annual revenue of every society is always precisely equal to the exchangeable value of the whole annual produce of its industry, or rather is precisely the same thing with that exchangeable value. As every individual, therefore, endeavours as much as he can, both to employ his capital in the support of domestic industry, and so to direct that industry that its produce maybe of the greatest value; every individual necessarily labours to render the annual revenue of the society as great as he can. He generally, indeed, neither intends to promote the public interest, nor knows how much he is promoting it. By preferring the support of domestic to that of foreign industry, he intends only his own security; and by directing that industry in such a manner as its produce may be of the greatest value, he intends only his own gain; and he is in this, as in many other cases, led by an invisible hand to promote an end which was no part of his intention. Nor is it always the worse for the society that it was no part of it. By pursuing his own interest, he frequently promotes that of the society more effectually than when he really intends to promote it. I have never known much good done by those who affected to trade for the public good. It is an affectation, indeed, not very common among merchants, and very few words need be employed in dissuading them from it."
+    },
+    "won-0077": {
+      "id": "won-0077",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book I > Chapter VII. Of the natural and market price of commodities",
+      "text": "Such enhancements of the market price are evidently the effect of natural causes, which may hinder the effectual demand from ever being fully supplied, and which may continue, therefore, to operate for ever. A monopoly granted either to an individual or to a trading company, has the same effect as a secret in trade or manufactures. The monopolists, by keeping the market constantly understocked by never fully supplying the effectual demand, sell their commodities much above the natural price, and raise their emoluments, whether they consist in wages or profit, greatly above their natural rate. The price of monopoly is upon every occasion the highest which can be got. The natural price, or the price of free competition, on the contrary, is the lowest which can be taken, not upon every occasion indeed, but for any considerable time together. The one is upon every occasion the highest which can be squeezed out of the buyers, or which it is supposed they will consent to give; the other is the lowest which the sellers can commonly afford to take, and at the same time continue their business. The exclusive privileges of corporations, statutes of apprenticeship, and all those laws which restrain in particular employments, the competition to a smaller number than might otherwise go into them, have the same tendency, though in a less degree. They are a sort of enlarged monopolies, and may frequently, for ages together, and in whole classes of employments, keep up the market price of particular commodities above the natural price, and maintain both the wages of the labour and the profits of the stock employed about them somewhat above their natural rate."
+    },
+    "won-0332": {
+      "id": "won-0332",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book I > Chapter XI > Part III. Of the variations in the proportion between the respective values of that sort of produce which always affords rent, and of that which sometimes does, and sometimes does not, afford rent",
+      "text": "Their superiority over the country gentleman is, not so much in their knowledge of the public interest, as in their having a better knowledge of their own interest than he has of his. It is by this superior knowledge of their own interest that they have frequently imposed upon his generosity, and persuaded him to give up both his own interest and that of the public, from a very simple but honest conviction, that their interest, and not his, was the interest of the public. The interest of the dealers, however, in any particular branch of trade or manufactures, is always in some respects different from, and even opposite to, that of the public. To widen the market, and to narrow the competition, is always the interest of the dealers. To widen the market may frequently be agreeable enough to the interest of the public; but to narrow the competition must always be against it, and can only serve to enable the dealers, by raising their profits above what they naturally would be, to levy, for their own benefit, an absurd tax upon the rest of their fellow-citizens. The proposal of any new law or regulation of commerce which comes from this order, ought always to be listened to with great precaution, and ought never to be adopted till after having been long and carefully examined, not only with the most scrupulous, but with the most suspicious attention."
+    },
+    "won-0938": {
+      "id": "won-0938",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book V > Chapter I > Part III. Of the expense of public works and public institutions",
+      "text": "Secondly, In a private copartnery, each partner is bound for the debts contracted by the company, to the whole extent of his fortune. In a joint-stock company, on the contrary, each partner is bound only to the extent of his share. The trade of a joint-stock company is always managed by a court of directors. This court, indeed, is frequently subject, in many respects, to the control of a general court of proprietors. But the greater part of these proprietors seldom pretend to understand any thing of the business of the company; and when the spirit of faction happens not to prevail among them, give themselves no trouble about it, but receive contentedly such halfyearly or yearly dividend as the directors think proper to make to them. This total exemption front trouble and front risk, beyond a limited sum, encourages many people to become adventurers in joint-stock companies, who would, upon no account, hazard their fortunes in any private copartnery. Such companies, therefore, commonly draw to themselves much greater stocks, than any private copartnery can boast of. The trading stock of the South Sea company at one time amounted to upwards of thirty-three millions eight hundred thousand pounds. The divided capital of the Bank of England amounts, at present, to ten millions seven hundred and eighty thousand pounds. The directors of such companies, however, being the managers rather of other people’s money than of their own, it cannot well be expected that they should watch over it with the same anxious vigilance with which the partners in a private copartnery frequently watch over their own. Like the stewards of a rich man, they are apt to consider attention to small matters as not for their master’s honour, and very easily give themselves a dispensation from having it. Negligence and profusion, therefore, must always prevail, more or less, in the management of the affairs of such a company. It is upon this account, that joint-stock companies for foreign trade have seldom been able to maintain the competition against private adventurers. They have, accordingly, very seldom succeeded without an exclusive privilege; and frequently have not succeeded with one. Without an exclusive privilege, they have commonly mismanaged the trade. With an exclusive privilege, they have both mismanaged and confined it."
+    },
+    "won-0986": {
+      "id": "won-0986",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book V > Chapter I > Part III. Of the expense of public works and public institutions",
+      "text": "Ought the public, therefore, to give no attention, it may be asked, to the education of the people? Or, if it ought to give any, what are the different parts of education which it ought to attend to in the different orders of the people? and in what manner ought it to attend to them? In some cases, the state of society necessarily places the greater part of individuals in such situations as naturally form in them, without any attention of government, almost all the abilities and virtues which that state requires, or perhaps can admit of. In other cases, the state of the society does not place the greater part of individuals in such situations; and some attention of government is necessary, in order to prevent the almost entire corruption and degeneracy of the great body of the people. In the progress of the division of labour, the employment of the far greater part of those who live by labour, that is, of the great body of the people, comes to be confined to a few very simple operations; frequently to one or two. But the understandings of the greater part of men are necessarily formed by their ordinary employments. The man whose whole life is spent in performing a few simple operations, of which the effects, too, are perhaps always the same, or very nearly the same, has no occasion to exert his understanding, or to exercise his invention, in finding out expedients for removing difficulties which never occur. He naturally loses, therefore, the habit of such exertion, and generally becomes as stupid and ignorant as it is possible for a human creature to become. The torpor of his mind renders him not only incapable of relishing or bearing a part in any rational conversation, but of conceiving any generous, noble, or tender sentiment, and consequently of forming any just judgment concerning many even of the ordinary duties of private life. Of the great and extensive interests of his country he is altogether incapable of judging; and unless very particular pains have been taken to render him otherwise, he is equally incapable of defending his country in war. The uniformity of his stationary life naturally corrupts the courage of his mind, and makes him regard, with abhorrence, the irregular, uncertain, and adventurous life of a soldier. It corrupts even the activity of his body, and renders him incapable of exerting his strength with vigour and perseverance in any other employment, than that to which he has been bred. His dexterity at his own particular trade seems, in this manner, to be acquired at the expense of his intellectual, social, and martial virtues. But in every improved and civilized society, this is the state into which the labouring poor, that is, the great body of the people, must necessarily fall, unless government takes some pains to prevent it."
+    },
+    "won-0990": {
+      "id": "won-0990",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book V > Chapter I > Part III. Of the expense of public works and public institutions",
+      "text": "It is otherwise with the common people. They have little time to spare for education. Their parents can scarce afford to maintain them, even in infancy. As soon as they are able to work, they must apply to some trade, by which they can earn their subsistence. That trade, too, is generally so simple and uniform, as to give little exercise to the understanding; while, at the same time, their labour is both so constant and so severe, that it leaves them little leisure and less inclination to apply to, or even to think of any thing else. But though the common people cannot, in any civilized society, be so well instructed as people of some rank and fortune; the most essential parts of education, however, to read, write, and account, can be acquired at so early a period of life, that the greater part, even of those who are to be bred to the lowest occupations, have time to acquire them before they can be employed in those occupations. For a very small expense, the public can facilitate, can encourage and can even impose upon almost the whole body of the people, the necessity of acquiring those most essential parts of education. The public can facilitate this acquisition, by establishing in every parish or district a little school, where children maybe taught for a reward so moderate, that even a common labourer may afford it; the master being partly, but not wholly, paid by the public; because, if he was wholly, or even principally, paid by it, he would soon learn to neglect his business. In Scotland, the establishment of such parish schools has taught almost the whole common people to read, and a very great proportion of them to write and account. In England, the establishment of charity schools has had an effect of the same kind, though not so universally, because the establishment is not so universal. If, in those little schools, the books by which the children are taught to read, were a little more instructive than they commonly are; and if, instead of a little smattering in Latin, which the children of the common people are sometimes taught there, and which can scarce ever be of any use to them, they were instructed in the elementary parts of geometry and mechanics; the literary education of this rank of people would, perhaps, be as complete as can be. There is scarce a common trade, which does not afford some opportunities of applying to it the principles of geometry and mechanics, and which would not, therefore, gradually exercise and improve the common people in those principles, the necessary introduction to the most sublime, as well as to the most useful sciences."
+    },
+    "won-0083": {
+      "id": "won-0083",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book I > Chapter VIII. Of the wages of labour",
+      "text": "We rarely hear, it has been said, of the combinations of masters, though frequently of those of workmen. But whoever imagines, upon this account, that masters rarely combine, is as ignorant of the world as of the subject. Masters are always and everywhere in a sort of tacit, but constant and uniform, combination, not to raise the wages of labour above their actual rate. To violate this combination is everywhere a most unpopular action, and a sort of reproach to a master among his neighbours and equals. We seldom, indeed, hear of this combination, because it is the usual, and, one may say, the natural state of things, which nobody ever hears of. Masters, too, sometimes enter into particular combinations to sink the wages of labour even below this rate. These are always conducted with the utmost silence and secrecy till the moment of execution; and when the workmen yield, as they sometimes do without resistance, though severely felt by them, they are never heard of by other people. Such combinations, however, are frequently resisted by a contrary defensive combination of the workmen, who sometimes, too, without any provocation of this kind, combine, of their own accord, to raise the price of their labour. Their usual pretences are, sometimes the high price of provisions, sometimes the great profit which their masters make by their work. But whether their combinations be offensive or defensive, they are always abundantly heard of. In order to bring the point to a speedy decision, they have always recourse to the loudest clamour, and sometimes to the most shocking violence and outrage. They are desperate, and act with the folly and extravagance of desperate men, who must either starve, or frighten their masters into an immediate compliance with their demands. The masters, upon these occasions, are just as clamorous upon the other side, and never cease to call aloud for the assistance of the civil magistrate, and the rigorous execution of those laws which have been enacted with so much severity against the combination of servants, labourers, and journeymen. The workmen, accordingly, very seldom derive any advantage from the violence of those tumultuous combinations, which, partly from the interposition of the civil magistrate, partly from the superior steadiness of the masters, partly from the necessity which the greater part of the workmen are under of submitting for the sake of present subsistence, generally end in nothing but the punishment or ruin of the ringleaders."
+    },
+    "won-0082": {
+      "id": "won-0082",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book I > Chapter VIII. Of the wages of labour",
+      "text": "It sometimes happens, indeed, that a single independent workman has stock sufficient both to purchase the materials of his work, and to maintain himself till it be completed. He is both master and workman, and enjoys the whole produce of his own labour, or the whole value which it adds to the materials upon which it is bestowed. It includes what are usually two distinct revenues, belonging to two distinct persons, the profits of stock, and the wages of labour. Such cases, however, are not very frequent; and in every part of Europe twenty workmen serve under a master for one that is independent, and the wages of labour are everywhere understood to be, what they usually are, when the labourer is one person, and the owner of the stock which employs him another. What are the common wages of labour, depends everywhere upon the contract usually made between those two parties, whose interests are by no means the same. The workmen desire to get as much, the masters to give as little, as possible. The former are disposed to combine in order to raise, the latter in order to lower, the wages of labour. It is not, however, difficult to foresee which of the two parties must, upon all ordinary occasions, have the advantage in the dispute, and force the other into a compliance with their terms. The masters, being fewer in number, can combine much more easily: and the law, besides, authorises, or at least does not prohibit, their combinations, while it prohibits those of the workmen. We have no acts of parliament against combining to lower the price of work, but many against combining to raise it. In all such disputes, the masters can hold out much longer. A landlord, a farmer, a master manufacturer, or merchant, though they did not employ a single workman, could generally live a year or two upon the stocks, which they have already acquired. Many workmen could not subsist a week, few could subsist a month, and scarce any a year, without employment. In the long run, the workman may be as necessary to his master as his master is to him; but the necessity is not so immediate."
+    },
+    "won-0562": {
+      "id": "won-0562",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book IV > Chapter II. Of restraints upon importation from foreign countries of such goods as can be produced at home",
+      "text": "What is the species of domestic industry which his capital can employ, and of which the produce is likely to be of the greatest value, every individual, it is evident, can in his local situation judge much better than any statesman or lawgiver can do for him. The statesman, who should attempt to direct private people in what manner they ought to employ their capitals, would not only load himself with a most unnecessary attention, but assume an authority which could safely be trusted, not only to no single person, but to no council or senate whatever, and which would nowhere be so dangerous as in the hands of a man who had folly and presumption enough to fancy himself fit to exercise it. To give the monopoly of the home market to the produce of domestic industry, in any particular art or manufacture, is in some measure to direct private people in what manner they ought to employ their capitals, and must in almost all cases be either a useless or a hurtful regulation. If the produce of domestic can be brought there as cheap as that of foreign industry, the regulation is evidently useless. If it cannot, it must generally be hurtful. It is the maxim of every prudent master of a family, never to attempt to make at home what it will cost him more to make than to buy. The tailor does not attempt to make his own shoes, but buys them of the shoemaker. The shoemaker does not attempt to make his own clothes, but employs a tailor. The farmer attempts to make neither the one nor the other, but employs those different artificers. All of them find it for their interest to employ their whole industry in a way in which they have some advantage over their neighbours, and to purchase with a part of its produce, or, what is the same thing, with the price of a part of it, whatever else they have occasion for."
+    },
+    "won-0869": {
+      "id": "won-0869",
+      "source_id": "won",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": 1776,
+      "location": "Book IV > Chapter IX. Of the agricultural systems, or of those systems of political economy which represent the produce of land, as either the sole or the principal source of the revenue and wealth of every country",
+      "text": "All systems, either of preference or of restraint, therefore, being thus completely taken away, the obvious and simple system of natural liberty establishes itself of its own accord. Every man, as long as he does not violate the laws of justice, is left perfectly free to pursue his own interest his own way, and to bring both his industry and capital into competition with those of any other man, or order of men. The sovereign is completely discharged from a duty, in the attempting to perform which he must always be exposed to innumerable delusions, and for the proper performance of which, no human wisdom or knowledge could ever be sufficient; the duty of superintending the industry of private people, and of directing it towards the employments most suitable to the interests of the society. According to the system of natural liberty, the sovereign has only three duties to attend to; three duties of great importance, indeed, but plain and intelligible to common understandings: first, the duty of protecting the society from the violence and invasion of other independent societies; secondly, the duty of protecting, as far as possible, every member of the society from the injustice or oppression of every other member of it, or the duty of establishing an exact administration of justice; and, thirdly, the duty of erecting and maintaining certain public works, and certain public institutions, which it can never be for the interest of any individual, or small number of individuals to erect and maintain; because the profit could never repay the expense to any individual, or small number of individuals, though it may frequently do much more than repay it to a great society."
+    }
+  },
+  "fact_check": {
+    "summary": "Script written in a Claude Code session without the API. Every direct quotation was checked word for word against the cited passage. Host lines describing Amazon are general and attribute claims to critics or to Amazon. Before publishing, check them against current reporting.",
+    "issues": []
+  }
+}
