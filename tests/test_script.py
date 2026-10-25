@@ -66,6 +66,14 @@ def test_mechanical_checks_flags_invented_quotes_and_unknown_ids():
     assert [(i.segment, i.kind) for i in issues] == [(11, "misquote"), (12, "unsupported")]
 
 
+def test_mechanical_checks_pairs_quote_marks_in_order():
+    script = Script(title="t", segments=[
+        guest('One said "Hegh sirs!" and the other said "the conversation ends in a conspiracy against the public".',
+              "won-0001"),
+    ])
+    assert mechanical_checks(script.segments, PASSAGES) == []
+
+
 def test_generate_episode_runs_plan_write_and_fact_check():
     figure = load_figure("adam_smith")
     plan = EpisodePlan(title="Smith on Pins", hook="A hook.", questions=[

@@ -55,6 +55,6 @@ def test_generate_longform_writes_each_chapter_and_packages():
     stamps = chapter_timestamps(ep)
     assert stamps[0] == ("0:00", "Ch 0") and stamps[1][0] == "1:07"  # 9-word cold open + 159-word chapter
     md = to_markdown(ep, host_name="Ram")
-    assert "## Cold open" in md and "### Ch 3" in md and "**Pins** (segments 0-1)" in md
+    assert "## Cold open" in md and "### Ch 3" in md and "**Pins**: fun" in md and 'From "word word' in md
     desc = youtube_description(ep)
     assert desc.startswith("About pins.") and "1:07 Ch 1" in desc and "AI recreation" in desc

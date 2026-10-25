@@ -213,6 +213,13 @@ def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", "", text.lower())).strip()
 
 
+def _quotations(text: str, min_len: int = 12) -> list[str]:
+    """Quoted spans long enough to check. Quote marks are paired in order, so a short quote
+    ("Hegh sirs!") never pairs its closing mark with the next quote's opening mark."""
+    spans = re.findall(r'"([^"]*)"|“([^”]*)”', text)
+    return [s for pair in spans for s in pair if len(s) >= min_len]
+
+
 def mechanical_checks(segments: list[Segment], passages: dict[str, Passage], offset: int = 0) -> list[Issue]:
     """Checks that need no model: unknown citations and quotations not found in the sources.
 
@@ -230,7 +237,7 @@ def mechanical_checks(segments: list[Segment], passages: dict[str, Passage], off
                 suggested_fix="Cite a provided passage or remove the claim.",
             ))
         cited_text = _normalize(" ".join(passages[c].text for c in seg.citations if c in passages))
-        for quote in re.findall(r"[\"“]([^\"”]{12,})[\"”]", seg.text):
+        for quote in _quotations(seg.text):
             if _normalize(quote) not in cited_text:
                 issues.append(Issue(
                     segment=i, kind="misquote", excerpt=quote[:80],

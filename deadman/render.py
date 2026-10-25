@@ -42,6 +42,14 @@ def _cold_open(ep: Episode):
     return ep.segments[p.cold_open_start: p.cold_open_end + 1] if p else []
 
 
+def _words(ep: Episode, index: int, n: int = 8, last: bool = False) -> str:
+    """The first (or last) few words of a segment, so a clip can be found in the script."""
+    if not 0 <= index < len(ep.segments):
+        return "?"
+    words = ep.segments[index].text.split()
+    return " ".join(words[-n:] if last else words[:n])
+
+
 def _source_numbers(ep: Episode) -> dict[str, int]:
     cited = [c for seg in ep.segments for c in seg.citations if c in ep.passages]
     return {pid: n for n, pid in enumerate(dict.fromkeys(cited), 1)}
@@ -89,7 +97,8 @@ def to_markdown(ep: Episode, host_name: str = "Host") -> str:
         out += ["", "**Thumbnail text**", ""] + [f"- {t}" for t in p.thumbnail_text]
         out += ["", "**Clips for Shorts**", ""]
         for c in p.clips:
-            out.append(f"- **{c.title}** (segments {c.start_segment}-{c.end_segment}): {c.why}")
+            out.append(f"- **{c.title}**: {c.why}  \n  From \"{_words(ep, c.start_segment)}...\" "
+                       f"to \"...{_words(ep, c.end_segment, last=True)}\"")
         out.append("")
 
     out += ["## Sources", ""] + _sources_list(ep, numbers) + [""]
