@@ -1,0 +1,83 @@
+title_options = ["Adam Smith: The Bored Tutor Who Invented Economics", "Adam Smith Was Never Pro-Greed. Here's What He Really Said", "The Father of Economics on Money, Happiness and Regret", "Adam Smith Reacts to AI, Influencers and Modern India", "Kidnapped at 3, Burned His Unfinished Work at 67: Adam Smith"]
+thumbnail_text = ["HE WAS BORED", "NOT PRO-GREED", "BURN IT ALL"]
+description = "Ram sits down with an AI recreation of Adam Smith, the Scottish philosopher who wrote The Wealth of Nations. They cover his kidnapping by gipsies at age three, being punished at Oxford for reading David Hume, starting the most famous economics book in history because he was bored in Toulouse, his friendship with Hume, a love he never explained, and why he had sixteen volumes of his own work burned a week before he died.\n\nSmith also explains what people get wrong about the invisible hand, why chasing wealth can cost you your peace of mind, what he thought of the East India Company in Bengal, and how he'd judge AI, influencers and modern India. Adam Smith in this episode is an AI recreation built from his own writings and John Rae's public-domain biography (1895). His direct quotations come word for word from those sources."
+cold_open_from = "Hold on. That book was The"
+cold_open_to = "Boredom is badly underrated. Every man"
+
+[[clips]]
+title = "Adam Smith was kidnapped at 3"
+why = "A surprising origin story with a funny ending line."
+from = "And the kidnapping?"
+to = "Threw me down and fled. I"
+
+[[clips]]
+title = "Adam Smith roasts Oxford"
+why = "Sharp, quotable, and a clean lesson on incentives."
+from = "Then you went to Oxford. One"
+to = "Because they were paid whether they"
+
+[[clips]]
+title = "The greatest economics book started out of boredom"
+why = "Strong hook built on Smith's own letter."
+from = "Glasgow was Paris, by comparison. And"
+to = "Boredom is badly underrated. Every man"
+
+[[clips]]
+title = "Adam Smith was NOT pro-greed"
+why = "Corrects the biggest myth about him with his own first sentence."
+from = "So, and this is what people"
+to = "So the guy everyone quotes on"
+
+[[clips]]
+title = "Losing your little finger vs. 100 million strangers"
+why = "Lands with modern viewers who scroll past disasters."
+from = "Suppose the great empire of China"
+to = "Is it? Then my book still"
+
+[[clips]]
+title = "How Adam Smith's best friend faced death"
+why = "Emotional and funny at once."
+from = "He was dying and you scolded"
+to = "A letter to our publisher, Strahan,"
+
+[[clips]]
+title = "Adam Smith on why chasing wealth won't make you happy"
+why = "Strong for self-improvement audiences, and fully grounded in his text."
+from = "I wrote a little portrait of"
+to = "And at the end, in old"
+
+[[clips]]
+title = "Adam Smith on influencers (1759)"
+why = "A 1759 passage that reads like a description of the internet."
+from = "Then I described them in 1759,"
+to = "I roasted myself first. Every author"
+
+[[clips]]
+title = "Adam Smith forced a refund on his students"
+why = "Funny, surprising and moving; it contradicts the 'greedy economist' image in one story."
+from = "I read that when you left,"
+to = "Self-interest is the engine of commerce,"
+
+[[clips]]
+title = "Adam Smith was banned from the sugar bowl"
+why = "Pure comedy from an eyewitness account by Walter Scott; great Short."
+from = "And you? What was your vice?"
+to = "A clear case of a monopoly"
+
+[[clips]]
+title = "Adam Smith: is college worth it?"
+why = "Evergreen question for young viewers with a sharp answer."
+from = "Is college worth it? University is"
+to = "Oxford, rich and endowed, taught me"
+
+[[clips]]
+title = "Adam Smith on crypto"
+why = "A timely topic answered with real history: John Law and the 1772 Scottish bank crash."
+from = "Crypto. Digital money that no government"
+to = "The same as on any splendid"
+
+[[clips]]
+title = "Adam Smith on the East India Company and modern India"
+why = "Strong for an Indian audience; a powerful historical indictment."
+from = "Last one, and it matters to"
+to = "A billion! Then here is my"

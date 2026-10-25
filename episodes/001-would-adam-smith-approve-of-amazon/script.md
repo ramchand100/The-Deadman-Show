@@ -1,8 +1,10 @@
+<!-- Generated from transcript.md by `deadman render`. Edit transcript.md, not this file. -->
+
 # Would Adam Smith Approve of Amazon?
 
 *The father of economics on warehouses, monopoly, shareholders and the people who pack your parcels, in his own words.*
 
-Guest: Adam Smith (AI recreation) · Topic: Would Adam Smith approve of Amazon?
+Guest: Adam Smith (AI recreation) · Host: Ram · ~1,812 words, about 12 minutes
 
 ## Script
 
@@ -91,6 +93,6 @@ Guest: Adam Smith (AI recreation) · Topic: Would Adam Smith approve of Amazon?
 
 ## Fact check
 
-Script written in a Claude Code session without the API. Every direct quotation was checked word for word against the cited passage. Host lines describing Amazon are general and attribute claims to critics or to Amazon. Before publishing, check them against current reporting.
+See review.md for the fact-checker's line-by-line review.
 
 No issues flagged.

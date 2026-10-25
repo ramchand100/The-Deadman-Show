@@ -5,13 +5,9 @@ from __future__ import annotations
 import json
 import re
 from dataclasses import asdict
-from datetime import date
 from pathlib import Path
 
 from .script import WORDS_PER_MINUTE, Episode
-
-OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
-
 
 def slugify(text: str, max_len: int = 50) -> str:
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:max_len].rstrip("-")
@@ -73,7 +69,8 @@ def to_markdown(ep: Episode, host_name: str = "Host") -> str:
         refs = "".join(f"[{numbers[c]}]" for c in seg.citations if c in numbers)
         return f"**{speakers[seg.speaker]}:** {seg.text}{' ' + refs if refs else ''}"
 
-    out = [f"# {ep.title}", "", f"*{ep.hook}*", "",
+    out = ["<!-- Generated from transcript.md by `deadman render`. Edit transcript.md, not this file. -->", "",
+           f"# {ep.title}", "", f"*{ep.hook}*", "",
            f"Guest: {ep.figure.name} (AI recreation) · Host: {host_name} · "
            f"~{words:,} words, about {round(words / WORDS_PER_MINUTE)} minutes", ""]
     if ep.issues:
@@ -150,8 +147,8 @@ def to_json(ep: Episode) -> dict:
     }
 
 
-def save(ep: Episode, host_name: str = "Host", output_dir: Path = OUTPUT_DIR, folder_name: str | None = None) -> Path:
-    folder = output_dir / ep.figure.slug / (folder_name or f"{date.today():%Y-%m-%d}-{slugify(ep.title)}")
+def save(ep: Episode, host_name: str, folder: Path) -> Path:
+    """Write the generated files (script.md, youtube-description.txt, episode.json) into folder."""
     folder.mkdir(parents=True, exist_ok=True)
     (folder / "script.md").write_text(to_markdown(ep, host_name), encoding="utf-8")
     (folder / "youtube-description.txt").write_text(youtube_description(ep), encoding="utf-8")

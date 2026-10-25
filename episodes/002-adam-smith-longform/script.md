@@ -1,3 +1,5 @@
+<!-- Generated from transcript.md by `deadman render`. Edit transcript.md, not this file. -->
+
 # Adam Smith: Kidnapped at Three, Bored in France, and Never Pro-Greed
 
 *The father of economics on his strange life, his best friend's death, money, happiness and modern India.*
@@ -591,6 +593,6 @@ Guest: Adam Smith (AI recreation) · Host: Ram · ~7,269 words, about 48 minutes
 
 ## Fact check
 
-Written in a Claude Code session without the API. Every direct quotation was checked word for word against the cited passage. Life events come from John Rae's Life of Adam Smith (1895), cited as biography; Rae's own sentences are paraphrased, never quoted as Smith's. Smith's letters quoted in Rae are quoted as his. Host lines about the modern world are general. Note: the Theory of Moral Sentiments text indexed here is a 1777 edition, so passages Smith added in 1790 are not used.
+See review.md for the fact-checker's line-by-line review.
 
 No issues flagged.

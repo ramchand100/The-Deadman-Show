@@ -24,54 +24,134 @@ def cmd_ingest(args: argparse.Namespace) -> None:
 def cmd_search(args: argparse.Namespace) -> None:
     figure = load_figure(args.figure)
     index = BM25Index(load_passages(figure))
+    passages = [p for p in index.passages if not args.kind or p.kind == args.kind]
+    if args.kind:
+        index = BM25Index(passages)
     for passage, score in index.search(args.query, k=args.k):
-        print(f"\n[{passage.id}] {score:.1f}  {passage.citation()}")
+        print(f"\n[{passage.id}] {score:.1f}  {passage.citation()} ({passage.kind})")
         print(f"  {passage.text[:400]}{'...' if len(passage.text) > 400 else ''}")
 
 
-def _generate_and_save(build, host_name: str) -> None:
-    """Run a generation function, turning API and credential failures into clean exits."""
+def cmd_show(args: argparse.Namespace) -> None:
+    figure = load_figure(args.figure)
+    by_id = {p.id: p for p in load_passages(figure)}
+    for pid in args.ids:
+        if pid not in by_id:
+            sys.exit(f"Error: no passage {pid!r}")
+        p = by_id[pid]
+        print(f"### {p.id} ({p.kind}) {p.citation()}\n\n{p.text}\n")
+
+
+def cmd_new(args: argparse.Namespace) -> None:
+    from .episodes import new_episode
+
+    folder = new_episode(load_figure(args.figure), args.host, args.format, args.themes, args.slug)
+    print(f"Created {folder}")
+    print("Next: research into research.md, write transcript.md, then `python -m deadman check "
+          f"{folder.name[:3]}`.")
+
+
+def _print_report(report) -> None:
+    for issue in report.errors:
+        print(f"ERROR   segment {issue.segment} · {issue.kind}: {issue.explanation} ({issue.excerpt[:60]!r})")
+    for warning in report.warnings:
+        print(f"warning {warning}")
+    minutes = report.words / 150
+    target = f" of ~{report.target_words:,} target" if report.target_words else ""
+    print(f"{report.words:,} words{target} (~{minutes:.0f} min). "
+          f"{len(report.errors)} error(s), {len(report.warnings)} warning(s).")
+
+
+def cmd_check(args: argparse.Namespace) -> None:
+    from .episodes import check_episode, load_episode, resolve_folder
+
+    episode, brief = load_episode(resolve_folder(args.episode))
+    report = check_episode(episode, brief)
+    _print_report(report)
+    if report.errors:
+        sys.exit(1)
+
+
+def cmd_render(args: argparse.Namespace) -> None:
+    from .episodes import check_episode, load_episode, resolve_folder
+    from .render import save
+
+    folder = resolve_folder(args.episode)
+    episode, brief = load_episode(folder)
+    report = check_episode(episode, brief)
+    _print_report(report)
+    if report.errors and not args.force:
+        sys.exit("Not rendered: fix the errors above, or pass --force to render anyway.")
+    episode.issues = report.errors
+    review = folder / "review.md"
+    episode.fact_check_summary = (
+        "See review.md for the fact-checker's line-by-line review." if review.exists()
+        else "No review.md yet: run the fact-checker before publishing."
+    )
+    save(episode, brief.host, folder)
+    print(f"Rendered {folder / 'script.md'}")
+
+
+def _generate(args: argparse.Namespace, fmt_name: str, build) -> None:
+    """Create an episode folder, generate the episode with the API, and write its files."""
     import anthropic
 
+    from .episodes import Brief, new_episode, save_episode_files, write_brief
     from .render import save
     from .script import GenerationError
 
+    figure = load_figure(args.figure)
+    index = BM25Index(load_passages(figure))
     try:
-        episode = build(anthropic.Anthropic())
+        episode = build(anthropic.Anthropic(), figure, index)
     except (GenerationError, anthropic.APIError) as e:
         sys.exit(f"Error: {e}")
     except TypeError as e:
         if "authentication" not in str(e):
             raise
         sys.exit("Error: no Anthropic credentials found. Set ANTHROPIC_API_KEY or run `ant auth login`.")
-    folder = save(episode, host_name=host_name)
-    print(f"Wrote {folder / 'script.md'}")
+
+    folder = new_episode(figure, args.host, fmt_name or "longform", episode.topic, episode.title)
+    if not fmt_name:
+        brief_path = folder / "brief.toml"
+        number = int(folder.name[:3])
+        brief_path.write_text(write_brief(Brief(number, figure.slug, args.host, "", episode.topic)), encoding="utf-8")
+    save_episode_files(episode, folder, args.host)
     if episode.issues:
-        print(f"{len(episode.issues)} fact-check issue(s) flagged; review them before recording.")
+        (folder / "review.md").write_text(
+            "# Review (generated)\n\n" + episode.fact_check_summary + "\n\n" + "\n".join(
+                f"- Segment {i.segment} · {i.kind}: {i.explanation} Fix: {i.suggested_fix}" for i in episode.issues
+            ) + "\n", encoding="utf-8")
+    save(episode, args.host, folder)
+    print(f"Wrote {folder}")
+    if episode.issues:
+        print(f"{len(episode.issues)} fact-check issue(s) flagged; see review.md before recording.")
 
 
 def cmd_script(args: argparse.Namespace) -> None:
     from .script import generate_episode
 
-    figure = load_figure(args.figure)
-    index = BM25Index(load_passages(figure))
-    _generate_and_save(lambda client: generate_episode(
-        client, figure, index, args.topic,
-        minutes=args.minutes, n_questions=args.questions,
+    _generate(args, "", lambda client, figure, index: generate_episode(
+        client, figure, index, args.topic, minutes=args.minutes, n_questions=args.questions,
         host_name=args.host, run_fact_check=not args.no_fact_check,
-    ), args.host)
+    ))
 
 
 def cmd_episode(args: argparse.Namespace) -> None:
     from .longform import generate_longform, load_format
 
-    figure = load_figure(args.figure)
+    from dataclasses import replace
+
+    from .episodes import pending_question
+
     fmt = load_format(args.format)
-    index = BM25Index(load_passages(figure))
-    _generate_and_save(lambda client: generate_longform(
+    if asked := pending_question():
+        fmt = replace(fmt, tradition=f"{fmt.tradition}\nThe previous guest, {asked[0]}, left this question, which "
+                                     f"the host reads out in the last chapter for this guest to answer: {asked[1]}")
+    _generate(args, args.format, lambda client, figure, index: generate_longform(
         client, figure, index, fmt, themes=args.themes,
         host_name=args.host, run_fact_check=not args.no_fact_check,
-    ), args.host)
+    ))
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -87,9 +167,32 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("figure")
     p.add_argument("query")
     p.add_argument("-k", type=int, default=5, help="Number of results")
+    p.add_argument("--kind", choices=["primary", "biography"], help="Only search one kind of source")
     p.set_defaults(func=cmd_search)
 
-    p = sub.add_parser("script", help="Generate a short single-topic episode script")
+    p = sub.add_parser("show", help="Print passages in full by id")
+    p.add_argument("figure")
+    p.add_argument("ids", nargs="+", help="Passage ids, e.g. won-0004 rae-0003")
+    p.set_defaults(func=cmd_show)
+
+    p = sub.add_parser("new", help="Create a new episode folder")
+    p.add_argument("figure")
+    p.add_argument("--host", required=True, help="Host name, e.g. Ram")
+    p.add_argument("--format", default="longform", help="Show format in formats/ (default: longform)")
+    p.add_argument("--themes", default="", help='Topics to make sure are covered, e.g. "AI, India"')
+    p.add_argument("--slug", default="", help="Short name for the folder, e.g. adam-smith-longform")
+    p.set_defaults(func=cmd_new)
+
+    p = sub.add_parser("check", help="Check an episode's transcript without a model")
+    p.add_argument("episode", help="Episode number, folder name or path")
+    p.set_defaults(func=cmd_check)
+
+    p = sub.add_parser("render", help="Check an episode and write script.md, description and JSON")
+    p.add_argument("episode", help="Episode number, folder name or path")
+    p.add_argument("--force", action="store_true", help="Render even if checks report errors")
+    p.set_defaults(func=cmd_render)
+
+    p = sub.add_parser("script", help="[API] Generate a short single-topic episode")
     p.add_argument("figure")
     p.add_argument("topic", help='e.g. "Would Adam Smith approve of Amazon?"')
     p.add_argument("--minutes", type=int, default=10, help="Target episode length")
@@ -98,7 +201,7 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--no-fact-check", action="store_true", help="Skip the model fact-check pass")
     p.set_defaults(func=cmd_script)
 
-    p = sub.add_parser("episode", help="Generate a long-form, multi-chapter episode")
+    p = sub.add_parser("episode", help="[API] Generate a long-form, multi-chapter episode")
     p.add_argument("figure")
     p.add_argument("--format", default="longform", help="Show format in formats/ (default: longform)")
     p.add_argument("--themes", default="", help='Topics to make sure are covered, e.g. "AI, India, startups"')
@@ -107,7 +210,9 @@ def main(argv: list[str] | None = None) -> None:
     p.set_defaults(func=cmd_episode)
 
     args = parser.parse_args(argv)
+    from .episodes import EpisodeFileError
+
     try:
         args.func(args)
-    except FileNotFoundError as e:
+    except (FileNotFoundError, EpisodeFileError) as e:
         sys.exit(f"Error: {e}")

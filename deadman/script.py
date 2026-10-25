@@ -46,7 +46,7 @@ class Script(BaseModel):
 
 class Issue(BaseModel):
     segment: int
-    kind: Literal["anachronism", "unsupported", "misquote", "out_of_character"]
+    kind: Literal["anachronism", "unsupported", "misquote", "out_of_character", "disclosure"]
     excerpt: str
     explanation: str
     suggested_fix: str
