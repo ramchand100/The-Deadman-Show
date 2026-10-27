@@ -1,5 +1,5 @@
 from deadman.figures import Source, load_figure
-from deadman.sources import _tidy_heading, chunk, clean
+from deadman.sources import _tidy_heading, chunk, clean, html_to_text
 
 SOURCE = Source(id="won", title="Wealth of Nations", year=1776, url="", start_line="BOOK I.", start_occurrence=2,
                 heading_levels={"BOOK": 1, "CHAPTER": 2, "PART": 3}, title_level=3)
@@ -49,3 +49,29 @@ def test_adam_smith_config_loads():
     assert {s.id for s in smith.sources} == {"won", "tms", "essays", "rae"}
     assert smith.source("won").heading_levels["PART"] == 3
     assert smith.source("rae").kind == "biography"
+
+
+def test_html_sources_become_paragraphs():
+    html = ("<!DOCTYPE html><html><head><style>p{}</style></head><body>"
+            "<p>*** START OF THE PROJECT GUTENBERG EBOOK X ***</p><h2>BOOK I.</h2>"
+            "<p>First   paragraph<br>wraps <span class='pagenum'>[Pg 4]</span>here &amp; on.</p>"
+            "<p>Second.</p><p>*** END OF THE PROJECT GUTENBERG EBOOK X ***</p></body></html>")
+    text = clean(html, Source(id="x", title="X", year=1, url="", start_line="BOOK I."))
+    paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
+    assert paragraphs == ["BOOK I.", "First paragraph\nwraps here & on.", "Second."]
+    assert "p{}" not in html_to_text(html)
+
+
+def test_isaac_newton_config_loads():
+    newton = load_figure("isaac_newton")
+    assert (newton.born, newton.died, newton.speaker_label) == (1642, 1727, "NEWTON")
+    assert {s.id for s in newton.sources} == {"principia", "opticks", "daniel", "brewster", "chittenden"}
+    assert {s.id for s in newton.sources if s.kind == "biography"} == {"brewster", "chittenden"}
+    assert newton.source("principia").skip_tables and not load_figure("adam_smith").source("won").skip_tables
+
+
+def test_extra_heading_words_and_title_levels():
+    source = Source(id="o", title="O", year=1, url="", heading_levels={"PART": 2, "PROP.": 3},
+                    title_level=2, title_levels={"BOOK OF OPTICKS": 1})
+    text = "THE FIRST BOOK OF OPTICKS\n\nPART I.\n\nPROP. I.\n\n" + "Light is made of rays. " * 20
+    assert chunk(text, source)[0].location == "The first book of opticks > Part I > Prop. I"

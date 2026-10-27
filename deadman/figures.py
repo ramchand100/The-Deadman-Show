@@ -26,6 +26,11 @@ class Source:
     heading_levels: dict[str, int] = field(default_factory=lambda: dict(DEFAULT_HEADING_LEVELS))
     # Depth of unnumbered all-caps titles; 0 means a title starts a new top-level work.
     title_level: int = 0
+    # Unnumbered titles at a different depth, by regex, e.g. {"BOOK OF OPTICKS" = 1}.
+    title_levels: dict[str, int] = field(default_factory=dict)
+    # Drop paragraphs that are mostly figures and symbols (astronomical tables). Off by default:
+    # changing how a source is chunked renumbers its passages and breaks existing citations.
+    skip_tables: bool = False
 
 
 @dataclass(frozen=True)

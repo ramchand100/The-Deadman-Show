@@ -5,6 +5,9 @@ from __future__ import annotations
 import json
 import re
 from dataclasses import asdict, dataclass
+from functools import lru_cache
+from html import unescape
+from html.parser import HTMLParser
 from pathlib import Path
 
 import requests
@@ -20,9 +23,10 @@ SUBTITLE_WORDS = 12
 
 _GUTENBERG_START = re.compile(r"^\*\*\* ?START OF (THE|THIS) PROJECT GUTENBERG.*$", re.M)
 _GUTENBERG_END = re.compile(r"^\*\*\* ?END OF (THE|THIS) PROJECT GUTENBERG.*$", re.M)
-_PAGE_REF = re.compile(r"\{\d+\}")
+_PAGE_REF = re.compile(r"\{\d+\}|\[Pg [0-9ivxlc]+\]", re.I)
 _FOOTNOTE_REF = re.compile(r"\[\d+\]")
 _RULE_LINE = re.compile(r"^[ \t]*[-*=][-*= \t]{2,}$", re.M)
+STRUCTURAL_WORDS = ("BOOK", "PART", "SECTION", "CHAPTER", "CHAP.")
 _STRUCTURAL = re.compile(r"^(BOOK|PART|SECTION|CHAPTER|CHAP\.)\s+([IVXLC]+)\b", re.I)
 _SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=[A-Z])")
 
@@ -58,10 +62,48 @@ def download(source: Source, raw_dir: Path, force: bool = False) -> str:
     return resp.text
 
 
+class _TextExtractor(HTMLParser):
+    """HTML to plain text: each block element becomes its own paragraph, like a Gutenberg .txt."""
+
+    BLOCKS = {"p", "div", "h1", "h2", "h3", "h4", "h5", "h6", "li", "tr", "blockquote", "table", "hr"}
+    SKIP = {"script", "style", "head"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts: list[str] = []
+        self.skipping = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self.SKIP:
+            self.skipping += 1
+        elif tag == "br":
+            self.parts.append("\n")
+        elif tag in self.BLOCKS:
+            self.parts.append("\n\n")
+
+    def handle_endtag(self, tag):
+        if tag in self.SKIP:
+            self.skipping = max(0, self.skipping - 1)
+        elif tag in self.BLOCKS:
+            self.parts.append("\n\n")
+
+    def handle_data(self, data):
+        if not self.skipping:
+            self.parts.append(re.sub(r"[ \t\r\n]+", " ", data))
+
+
+def html_to_text(html: str) -> str:
+    extractor = _TextExtractor()
+    extractor.feed(html)
+    text = unescape("".join(extractor.parts))
+    lines = [line.strip() for line in text.split("\n")]
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip() + "\n"
+
+
 def _find_line(lines: list[str], target: str, occurrence: int, start: int = 0) -> int:
     seen = 0
     for i in range(start, len(lines)):
-        if lines[i].strip() == target:
+        if lines[i].strip().replace("_", "") == target.replace("_", ""):
             seen += 1
             if seen == occurrence:
                 return i
@@ -71,6 +113,8 @@ def _find_line(lines: list[str], target: str, occurrence: int, start: int = 0) -
 def clean(raw: str, source: Source) -> str:
     """Strip Gutenberg boilerplate and front/back matter, keeping the author's text."""
     text = raw.replace("\r\n", "\n").replace("\r", "\n").lstrip("﻿")
+    if text.lstrip()[:15].lower().startswith(("<!doctype", "<html", "<?xml")):
+        text = html_to_text(text)
     if m := _GUTENBERG_START.search(text):
         text = text[m.end():]
     if m := _GUTENBERG_END.search(text):
@@ -96,8 +140,26 @@ def _paragraphs(text: str) -> list[str]:
     return paras
 
 
-def _is_structural(para: str) -> bool:
-    return len(para) < 300 and bool(_STRUCTURAL.match(para))
+@lru_cache
+def _structural_pattern(words: tuple[str, ...]) -> re.Pattern:
+    """Numbered headings: one of the words, then a roman numeral ("BOOK II", "PROP. IV")."""
+    alternatives = "|".join(re.escape(w) for w in sorted(words, key=len, reverse=True))
+    return re.compile(rf"^({alternatives})\s+([IVXLC]+)\b", re.I)
+
+
+def structural_pattern(source: Source) -> re.Pattern:
+    """The default heading words plus any extra ones a source declares in heading_levels."""
+    return _structural_pattern(tuple(sorted(set(STRUCTURAL_WORDS) | set(source.heading_levels))))
+
+
+def _is_structural(para: str, pattern: re.Pattern = _STRUCTURAL) -> bool:
+    return len(para) < 300 and bool(pattern.match(para))
+
+
+def _is_mostly_text(para: str) -> bool:
+    """False for tables of figures and symbols, which make useless passages."""
+    letters = sum(c.isalpha() for c in para)
+    return letters >= 0.5 * len(para.replace(" ", ""))
 
 
 def _is_caps_title(para: str) -> bool:
@@ -105,16 +167,19 @@ def _is_caps_title(para: str) -> bool:
 
 
 def _heading_level(heading: str, source: Source) -> int:
-    m = _STRUCTURAL.match(heading)
+    m = structural_pattern(source).match(heading)
     if not m:
+        for pattern, level in source.title_levels.items():
+            if re.search(pattern, heading, re.I):
+                return level
         return source.title_level
     return source.heading_levels.get(m.group(1).upper(), max(source.heading_levels.values()))
 
 
-def _tidy_heading(heading: str, label_only: bool = False) -> str:
+def _tidy_heading(heading: str, label_only: bool = False, pattern: re.Pattern = _STRUCTURAL) -> str:
     """'CHAPTER VIII. OF THE WAGES OF LABOUR.' -> 'Chapter VIII. Of the wages of labour'."""
     heading = heading.strip().rstrip(".")
-    m = _STRUCTURAL.match(heading)
+    m = pattern.match(heading)
     if m:
         label = f"{m.group(1).capitalize()} {m.group(2).upper()}"
         if label_only:
@@ -141,6 +206,7 @@ def _split_long(para: str) -> list[str]:
 
 def chunk(text: str, source: Source) -> list[Passage]:
     """Group paragraphs into ~TARGET_WORDS passages that never cross a heading."""
+    pattern = structural_pattern(source)
     passages: list[Passage] = []
     levels: dict[int, str] = {}
     buffer: list[str] = []
@@ -148,7 +214,7 @@ def chunk(text: str, source: Source) -> list[Passage]:
 
     def location() -> str:
         keys = sorted(levels)
-        return " > ".join(_tidy_heading(levels[k], label_only=k != keys[-1]) for k in keys)
+        return " > ".join(_tidy_heading(levels[k], label_only=k != keys[-1], pattern=pattern) for k in keys)
 
     def flush() -> None:
         if not buffer:
@@ -179,7 +245,7 @@ def chunk(text: str, source: Source) -> list[Passage]:
 
     in_footnotes = False
     for para in _paragraphs(text):
-        if _is_structural(para):
+        if _is_structural(para, pattern):
             flush()
             if pending:
                 apply_heading()
@@ -195,6 +261,8 @@ def chunk(text: str, source: Source) -> list[Passage]:
             # Multi-line titles and subtitles join the heading in progress.
             flush()
             pending.append(para)
+        elif source.skip_tables and not _is_mostly_text(para):
+            continue
         elif pending and len(para.split()) <= SUBTITLE_WORDS:
             pending.append(para)
         else:
