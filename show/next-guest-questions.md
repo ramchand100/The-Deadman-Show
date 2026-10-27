@@ -6,4 +6,5 @@ Add a row when an episode is finished.
 
 | Episode | Asked by | Question | Answered by |
 |---|---|---|---|
-| 002 | Adam Smith | Was there something you left unfinished? And if your friends offered to save it from the fire, would you let them? | *(next guest)* |
+| 002 | Adam Smith | Was there something you left unfinished? And if your friends offered to save it from the fire, would you let them? | Sir Isaac Newton (003) |
+| 003 | Sir Isaac Newton | What did you once believe on good evidence that later evidence proved false, and how long did it take you to admit it? | *(next guest)* |

@@ -250,7 +250,7 @@ NEWTON: Mr. Hooke let it be known that I had the notion of the inverse square fr
 
 RAM: You were going to cut the part that explains the whole solar system, because of an argument?
 
-NEWTON: I was going to cut the part that would cause the most argument. There is a difference. But Dr. Halley begged me not to, in the name of the Society, which had resolved to print it at its own expense with Halley seeing it through the press. I gave way. It came out complete in May 1687. [brewster-0123, brewster-0124]
+NEWTON: I was going to cut the part that would cause the most argument. There is a difference. But Dr. Halley begged me not to, in the name of the Society, which had resolved to print it at its own expense with Halley seeing it through the press. I gave way. It came out complete in 1687. [brewster-0123, brewster-0124]
 
 RAM: And after that, you leave Cambridge altogether.
 
@@ -606,7 +606,7 @@ RAM: So which Newton should Adam Smith believe?
 
 NEWTON: Both. I would let them save what was finished and true. What was half-done I would rather they kept back. "If any other Papers writ on this Subject are got out of my Hands they are imperfect". But if what I wrote may help those who come after, then as I said of my work on the prophecies, "if I have done any thing which may be useful to following writers, I have my design." [opticks-0000, brewster-0237]
 
-RAM: For what it's worth, nobody burned your papers. Most of them passed down through your family for two centuries. Many were sold at auction in 1936 and scattered, but they survive.
+RAM: For what it's worth, after your death nobody burned your papers. Your scientific papers ended up at Cambridge, and many of the rest were sold at auction in 1936 and scattered, but they survive.
 
 NEWTON: Then my friends had their way in the end. They usually did.
 
