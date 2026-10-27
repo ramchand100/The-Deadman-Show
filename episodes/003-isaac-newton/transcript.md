@@ -34,11 +34,11 @@ NEWTON: Above the air. And what holds them up there?
 
 RAM: You told us. The leaden ball fired from a mountain.
 
-NEWTON: Ah. I wrote that if you fired a ball from a mountain with a greater and greater velocity, it would land farther and farther away, ten degrees, thirty, ninety, "or even might go quite round the whole earth before it falls; or lastly, so that it might never fall to the earth, but go forward into the celestial spaces, and proceed in its motion in infinitum." It was a thing done on paper, Mr Ram, to show how the Moon is kept in her orbit. [principia-0009]
+NEWTON: Ah. I wrote that if you fired a ball from a mountain with a greater and greater velocity, it would land farther and farther away, ten degrees, thirty, ninety, "or even might go quite round the whole earth before it falls; or lastly, so that it might never fall to the earth, but go forward into the celestial spaces, and proceed in its motion in infinitum." It was a thing done on paper, Mr Ram, to show how the Moon is kept in her orbit. [principia-0009, principia-0010]
 
 RAM: We've done it. Thousands of machines are circling the Earth right now. People, too. Men have walked on the Moon.
 
-NEWTON: Give me a moment. A thing I could only reason out, done with the hands. Men standing on the body I spent years trying to calculate. I have never cared for poetry, but that comes very near it. [principia-0010]
+NEWTON: Give me a moment. A thing I could only reason out, done with the hands. Men standing on the body I spent years trying to calculate. I have never cared for poetry, but that comes very near it. [brewster-0005]
 
 RAM: One more. The comet of 1682. You wrote it might come back.
 
@@ -200,9 +200,9 @@ RAM: So no apple?
 
 NEWTON: I did not say no apple. I said I remember the Moon. Whether something fell in an orchard that afternoon, I cannot swear before you, and I will not. It is the Moon that mattered.
 
-RAM: For what it's worth, after you died the tree in that garden was pointed out as the tree. The one whose apple is supposed to have turned your attention to gravity. It blew down in a storm, and someone had it made into a chair.
+RAM: For what it's worth, after you died the tree in that garden was pointed out as the tree. The one whose apple is supposed to have turned your attention to gravity. A storm brought it down, and part of it was made into a chair.
 
-NEWTON: A chair. So the tree that is said to have taught me about falling ended its days holding people up. There is a proposition in that somewhere. [brewster-0289, chittenden-0061]
+NEWTON: A chair. So the tree that is said to have taught me about falling ended up holding people up. There is a proposition in that somewhere. [brewster-0289, chittenden-0061]
 
 RAM: So what did you do with the Moon idea?
 
@@ -250,7 +250,7 @@ NEWTON: Mr. Hooke let it be known that I had the notion of the inverse square fr
 
 RAM: You were going to cut the part that explains the whole solar system, because of an argument?
 
-NEWTON: I was going to cut the part that would cause the most argument. There is a difference. But Dr. Halley begged me not to, in the name of the Society, which had resolved to print it at its own expense with Halley seeing it through the press. I gave way. It came out complete in the summer of 1687. [brewster-0123, brewster-0124]
+NEWTON: I was going to cut the part that would cause the most argument. There is a difference. But Dr. Halley begged me not to, in the name of the Society, which had resolved to print it at its own expense with Halley seeing it through the press. I gave way. It came out complete in May 1687. [brewster-0123, brewster-0124]
 
 RAM: And after that, you leave Cambridge altogether.
 
@@ -432,7 +432,7 @@ NEWTON: Badly. I have drawn no general law from it. One observation is not an in
 
 RAM: What did the Mint job actually involve?
 
-NEWTON: The coin of the nation had been clipped and debased, and Montague resolved to make it all again. My mathematics and my knowledge of chymistry were of use, and the whole recoinage was done in two years. Later I wrote a report on the coinage and drew up a table of the assays of foreign coins. [brewster-0204, brewster-0207]
+NEWTON: The coin of the nation had been adulterated and debased, and Montague resolved to make it all again. My mathematics and my knowledge of chymistry were of use, and the whole recoinage was done in two years. Later I wrote a report on the coinage and drew up a table of the assays of foreign coins. [brewster-0204, brewster-0207]
 
 RAM: And the professorship?
 
@@ -448,11 +448,11 @@ NEWTON: "To avoid being engaged in Disputes about these Matters, I have hitherto
 
 RAM: But when Leibniz said you'd copied him, you went to war. For people watching: you and Leibniz both developed what we now call calculus. You called it fluxions. Leibniz said you didn't have his method before him. Historians today generally say you both found it independently. And some historians say you had a bigger hand in the Royal Society's report on the dispute than you let on.
 
-NEWTON: I said before the Society that I did not interfere in that publication, and that I held back two letters which favoured me. I stand on what I said then. I did not answer him in my own name at all until the King himself asked when my answer would appear. And then I wrote, "But he is the aggressor, and it lies upon him to prove the charge." [brewster-0170, brewster-0171]
+NEWTON: I said before the Society that I did not interfere in that publication, and that I held back two letters which favoured me. I stand on what I said then. I would not answer his letter to the Abbé Conti, whatever my friends urged, until the King himself asked when my answer would appear. And then I wrote, "But he is the aggressor, and it lies upon him to prove the charge." [brewster-0170, brewster-0171]
 
 RAM: That doesn't sound like a man who values his quiet.
 
-NEWTON: A man may love his quiet and still not let himself be called a thief. He accused me of plagiary. That is a charge against my honesty, not my mathematics. On the mathematics, I published what I had tried, and left the rest to others. [brewster-0171, opticks-0000]
+NEWTON: A man may love his quiet and still not let himself be called a thief. He accused me of plagiary. That is a charge against my honesty, not my mathematics. In the Opticks I published what I had tried, and left the rest to others. [brewster-0171, opticks-0000]
 
 RAM: So what actually made you happy? Not money, not winning.
 
@@ -472,7 +472,7 @@ NEWTON: It is not humility. It is measurement. Set what I found beside what is l
 
 RAM: Last thing. A young person starting their career today. What do you tell them?
 
-NEWTON: What I told young Mr. Aston when I was twenty-six and he was setting out on his travels. "You will find little or no advantage in seeming wiser or much more ignorant than your company." And, "If you bee affronted, it is better, in a forraine country, to pass it by in silence, and with a jest, though with some dishonour, than to endeavour revenge". [brewster-0303]
+NEWTON: What I told young Mr. Aston when I was twenty-six and he was setting out on his travels. "You will find little or no advantage in seeming wiser or much more ignorant than your company." And, "If you bee affronted, it is better, in a forraine country, to pass it by in silence, and with a jest, though with some dishonour, than to endeavour revenge". [brewster-0302, brewster-0303]
 
 RAM: With respect, Sir Isaac, you did not follow that advice. Hooke. Leibniz.
 
@@ -490,9 +490,9 @@ RAM: Light first, money second. I like that. Next, I'm going to throw some of ou
 
 ## Clocks, comets and the end of the world
 
-RAM: First one. You sat on the government committee about finding longitude at sea. Today, the phone in my pocket knows where I am on the Earth to within a few feet. It does it by listening to clocks circling overhead.
+RAM: First one. You gave evidence to the Commons committee on finding longitude at sea. Today, the phone in my pocket knows where I am on the Earth to within a few feet. It does it by listening to clocks circling overhead.
 
-NEWTON: Clocks. Then you solved the watch. In 1714 I told the committee of the Commons that a watch to keep time exactly at sea, with the ship rolling, the heat and cold, the wet and dry, and gravity itself different from one latitude to another, "such a watch hath not yet been made." [brewster-0215]
+NEWTON: Clocks. Then you solved the watch. In 1714 I told the committee of the Commons that a watch to keep time exactly at sea, with the ship rolling, the heat and cold, the wet and dry, and gravity itself different from one latitude to another, "such a watch hath not yet been made." [brewster-0214, brewster-0215]
 
 RAM: Someone made it. A clockmaker, a few decades after your death. And now the clocks are so good we put them in the sky.
 
@@ -508,15 +508,15 @@ NEWTON: I wrote the method. Induction "be no Demonstration of general Conclusion
 
 RAM: Okay. Here's the surprise topic. If you search your name online, one of the first things you'll find is the claim that Isaac Newton predicted the world will end in 2060. Did you?
 
-NEWTON: I have no notion where your century found that number, and I will not do sums to please it. Hear what I wrote about men who set dates. "The folly of Interpreters has been, to foretel times and things by this Prophecy, as if God designed to make them Prophets. By this rashness they have not only exposed themselves, but brought the Prophecy also into contempt." [daniel-0179]
+NEWTON: I will not affirm any date I did not publish, and in what I prepared for the press I set none. Whatever private reckonings I made on loose sheets, I do not stand behind them as prophecy, and I will not do sums now to please your century. Hear what my Observations say about men who set dates. "The folly of Interpreters has been, to foretel times and things by this Prophecy, as if God designed to make them Prophets. By this rashness they have not only exposed themselves, but brought the Prophecy also into contempt." [daniel-0179]
 
 RAM: But you spent years on the prophecies. Surely you wanted to know when.
 
 NEWTON: God gave the prophecies "not to gratify men's curiosities by enabling them to foreknow things, but that after they were fulfilled they might be interpreted by the event". Where a prophecy was not yet fulfilled, I refused to interpret it. "The manner I know not. Let time be the Interpreter." [daniel-0179, daniel-0092]
 
-RAM: So the man the internet says set a date for the end of the world wrote that date-setting is folly.
+RAM: So the man the internet says set a date for the end of the world wrote, in print, that date-setting is folly. Though historians say the number does turn up in your private notes.
 
-NEWTON: In print. Before witnesses. Though I will make you a confession. Toward the end, sitting by a wood fire at Kensington, my nephew Mr. Conduit had me talking about the comet of 1680. It passed so near the sun that it must be slowed, and I had written that it "will at last fall down upon the body of the sun." [principia-0775, brewster-0307]
+NEWTON: In print, where I meant it to stand. A man tries sums on loose sheets; he does not swear to them. But I will make you a confession. Toward the end, sitting by a wood fire at Kensington, my nephew Mr. Conduit had me talking about the comet of 1680. It passed so near the sun that it must be slowed, and I had written that it "will at last fall down upon the body of the sun." [principia-0775, brewster-0307]
 
 RAM: And then what?
 
@@ -600,13 +600,13 @@ NEWTON: I have been saved from myself twice already, as you have heard. Dr. Hall
 
 RAM: So the answer is yes.
 
-NEWTON: Not always. Once I stopped a friend from saving me. I had written a tract on two corrupted texts of Scripture, and Mr. Locke sent it to Holland to be printed without my name. When I heard it was going ahead, I wrote to him: "Let me entreat you to stop their translation and impression so soon as you can; for I design to suppress them." I was afraid of being drawn into another controversy. [brewster-0230, brewster-0231]
+NEWTON: Not always. Once I stopped a friend from saving me. I had written a tract on two corrupted texts of Scripture, and I myself asked Mr. Locke to have it translated and published abroad. He sent it to Holland to be printed without my name. When I heard it was going ahead, I wrote to him: "Let me entreat you to stop their translation and impression so soon as you can; for I design to suppress them." I was afraid of being drawn into another controversy. [brewster-0230, brewster-0231]
 
 RAM: So which Newton should Adam Smith believe?
 
 NEWTON: Both. I would let them save what was finished and true. What was half-done I would rather they kept back. "If any other Papers writ on this Subject are got out of my Hands they are imperfect". But if what I wrote may help those who come after, then as I said of my work on the prophecies, "if I have done any thing which may be useful to following writers, I have my design." [opticks-0000, brewster-0237]
 
-RAM: For what it's worth, nobody burned your papers. Most of them passed down through your family, and they were kept.
+RAM: For what it's worth, nobody burned your papers. Most of them passed down through your family for two centuries. Many were sold at auction in 1936 and scattered, but they survive.
 
 NEWTON: Then my friends had their way in the end. They usually did.
 
