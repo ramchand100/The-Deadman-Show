@@ -283,8 +283,14 @@ def check_episode(ep: Episode, brief: Brief) -> CheckReport:
     warnings = []
 
     host_lines = [s.text for s in segments if s.speaker == "HOST"]
+    # While later chapters are still empty, the closing line isn't written yet: remind, don't block.
+    complete = all(ch.segments for ch in ep.chapters)
     for where, line in (("opening", host_lines[:1]), ("closing", host_lines[-1:])):
         if not any("AI recreation" in text for text in line):
+            if where == "closing" and not complete:
+                warnings.append("The host's closing line must say the guest is an AI recreation "
+                                "(required once the last chapter is written).")
+                continue
             errors.append(Issue(segment=0, kind="disclosure", excerpt=where,
                                 explanation=f"The host's {where} line must say the guest is an AI recreation.",
                                 suggested_fix="Add the disclosure from show/bible.md."))

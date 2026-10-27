@@ -90,6 +90,16 @@ def test_check_requires_disclosure_and_flags_misquotes():
     assert kinds == ["disclosure", "misquote"]
 
 
+def test_closing_disclosure_only_required_once_every_chapter_is_written():
+    ep = make_episode()
+    brief = Brief(number=1, figure="adam_smith", host="Ram", format="")
+    ep.chapters[1].segments[-1].text = "Thanks."
+    assert [i.excerpt for i in check_episode(ep, brief).errors] == ["closing"]
+    ep.chapters.append(type(ep.chapters[0])(title="Later", segments=[]))
+    report = check_episode(ep, brief)
+    assert report.errors == [] and any("closing line" in w for w in report.warnings)
+
+
 def test_check_warns_when_far_short_of_format_length():
     report = check_episode(make_episode(), Brief(number=1, figure="adam_smith", host="Ram", format="longform"))
     assert any("chapters" in w for w in report.warnings)
