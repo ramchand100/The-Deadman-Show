@@ -1,0 +1,77 @@
+title_options = [
+  "Isaac Newton: The Apple Myth, Bitter Rivals and a Mouse Called Miller",
+  "Isaac Newton Was Never Hit by an Apple. Here's What He Remembers",
+  "Isaac Newton Reacts to the Moon Landing, Satellites and Einstein",
+  "Did Newton Predict the End of the World? He Answers",
+  "Isaac Newton on Genius, Rivals and the Letters He Regretted",
+]
+thumbnail_text = ["NO APPLE?", "END OF THE WORLD?", "I FRAME NO HYPOTHESES"]
+description = "Ram sits down with an AI recreation of Sir Isaac Newton, the man who explained gravity and light. Newton talks about the mouse that ran his model windmill, the paper kites that made Lincolnshire villagers think comets were coming, the plague years at Woolsthorpe, what he really remembers about the apple, why he hid his Moon calculation for years, and the quarrels with Hooke and Leibniz that he never forgave.\n\nHe explains his prism experiment and his laws of motion simply, admits he never knew what gravity is, reads from the 1693 letters he wrote after days without sleep, reacts to satellites, the Moon landings and Einstein, and answers the internet's claim that he predicted the end of the world. Sir Isaac Newton in this episode is an AI recreation built from his own writings and public-domain biographies by David Brewster (1831) and N. W. Chittenden (1846); his direct quotations come word for word from those sources."
+cold_open_from = "So no apple?"
+cold_open_to = "I did not say no apple."
+
+[[clips]]
+title = "Newton built a windmill powered by a mouse"
+why = "A charming, surprising origin story with a dry modern joke at the end."
+from = "And then you put a mouse in it."
+to = "Then your century has my sympathy"
+
+[[clips]]
+title = "Teenage Newton faked comets with paper kites"
+why = "Funny and visual; a great Short with a sharp closing line."
+from = "Tell me about the kites."
+to = "I suppose I was conducting an experiment"
+
+[[clips]]
+title = "Was Newton really hit by an apple?"
+why = "The question every viewer wants answered, handled honestly from the sources."
+from = "But first, the question everyone watching"
+to = "There is a proposition in that somewhere."
+
+[[clips]]
+title = "Newton on why 'close' is not true"
+why = "Shows his standard of proof in two lines; strong for science audiences."
+from = "Only a sixth! That's close."
+to = "If more men followed that rule"
+
+[[clips]]
+title = "Newton hears that Halley's Comet came back"
+why = "A delightful reaction with a self-deprecating punchline."
+from = "One more. The comet of 1682."
+to = "I suspect you would be calling it Newton's mistake."
+
+[[clips]]
+title = "Newton reacts to people walking on the Moon"
+why = "The emotional peak of the welcome: his thought experiment, made real."
+from = "Ah. I wrote that if you fired a ball"
+to = "that comes very near it."
+
+[[clips]]
+title = "Newton admits he never knew what gravity is"
+why = "Corrects the most common misconception in his own words."
+from = "Here's the misconception."
+to = "It is a word for the effect, not the cause."
+
+[[clips]]
+title = "The letters Newton wrote after five nights without sleep"
+why = "The most human moment in the episode, told with dignity."
+from = "Then let's talk about something you did write."
+to = "They do not need to forgive you."
+
+[[clips]]
+title = "Newton: a boy playing on the sea-shore"
+why = "His most famous saying, and a sharp twist: 'It is not humility. It is measurement.'"
+from = "There's a line of yours, from near the end"
+to = "see how small the one is."
+
+[[clips]]
+title = "Did Newton predict the end of the world in 2060?"
+why = "A viral topic answered from his own published words, with a funny confession."
+from = "Okay. Here's the surprise topic."
+to = "A man is allowed one inconsistency"
+
+[[clips]]
+title = "Newton wrote 'electric spirit' and stopped"
+why = "A goosebump moment linking his unfinished idea to our world."
+from = "That, and a thing I suspected beneath it."
+to = "describe a room I had never seen."
