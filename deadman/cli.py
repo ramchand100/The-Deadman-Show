@@ -47,7 +47,7 @@ def cmd_new(args: argparse.Namespace) -> None:
 
     folder = new_episode(load_figure(args.figure), args.host, args.format, args.themes, args.slug)
     print(f"Created {folder}")
-    print("Next: research into research.md, write transcript.md, then `python -m deadman check "
+    print("Next: fill the research/ files, write transcript.md, then `python -m deadman check "
           f"{folder.name[:3]}`.")
 
 
