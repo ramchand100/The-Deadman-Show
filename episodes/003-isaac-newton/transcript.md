@@ -260,11 +260,233 @@ RAM: A quick reminder for anyone just joining us: my guest is an AI recreation o
 
 NEWTON: Montague promised me the office had not too much business. He was a fine statesman, Mr Ram, but on that point he was mistaken. I could not even find leisure to prepare a new edition of the Principia. But we will come to the Mint. [brewster-0206, brewster-0210]
 
-## The big ideas, simply
+## A little moon on a mountain
 
-## Friendship, love and loss
+RAM: You promised me an explanation of the second prism. Explain it like I'm a teenager who's never seen a prism.
 
-## Money, success and happiness
+NEWTON: Very well. Sunlight comes into my darkened chamber and strikes a prism, which spreads it into a long band of colours. Close behind the prism I set a board with a small hole in it, so only one part of that band could pass. Twelve feet farther on, a second board with a second hole, and behind it a second prism. [opticks-0047]
+
+RAM: So you've picked out one slice of the rainbow and fired it into another prism.
+
+NEWTON: Just so. Then I turned the first prism slowly, to and fro, so that each colour in turn came through both holes, and I marked on the far wall where it landed. The holes never moved, so every colour struck the second glass the same way. And yet the blue was bent more than the red, every time. What the first prism bent most, the second bent most. [opticks-0047, opticks-0048]
+
+RAM: And why does that matter so much?
+
+NEWTON: Because the glass does not make the colours. If it did, the second prism would make new ones. It does not. The colours were already in the sunlight, each with its own fixed degree of bending. The prism serves only to sort them. I will go further. "For the Rays to speak properly are not coloured." A ray has a power to stir up the sensation of red in us, as a trembling string stirs up the sensation of a note. The colour is in the seeing. [opticks-0059, opticks-0111]
+
+RAM: So white light isn't pure at all.
+
+NEWTON: White is the most mixed thing there is. "the whiteness of the Sun's Light is compounded of all the primary Colours mix'd in a due Proportion." Hold white paper among all the colours and it looks white. Block some out and the white is gone. [opticks-0118]
+
+RAM: Did anyone believe you?
+
+NEWTON: Not easily. So I mixed painters' powders, red lead, blue bice and others, into a dull colour like new-cut wood. I rubbed it on the floor in the sunshine, with white paper beside it in the shade, and from a distance the powder looked as white as the paper. "For," as I wrote, "when I was trying this, a friend coming to visit me, I stopped him at the door, and before I told him what the colours were, or what I was doing, I asked him which of the two whites were the best, and wherein they differed!" He said they were both good whites, and he could not tell which was the better. [brewster-0031]
+
+RAM: I love that. Your friend comes round to visit, and before he's through the door he's part of an experiment.
+
+NEWTON: He was not the last. A man who visits a natural philosopher should expect to be useful.
+
+RAM: Let's do motion. Your three laws. Teenager version.
+
+NEWTON: "Every body perseveres in its state of rest, or of uniform motion in a right line, unless it is compelled to change that state by forces impressed thereon." A thrown ball would go on for ever, if the air and gravity let it. The planets, in their freer spaces, very nearly do. [principia-0024]
+
+RAM: Second.
+
+NEWTON: "If any force generates a motion, a double force will generate double the motion, a triple force triple the motion". Push twice as hard, get twice the change. [principia-0025]
+
+RAM: And the third is the one everybody half-remembers. Every action has an equal and opposite reaction.
+
+NEWTON: "If you press a stone with your finger, the finger is also pressed by the stone." And if a horse drags a stone on a rope, "the horse (if I may so say) will be equally drawn back towards the stone". [principia-0026]
+
+RAM: Hang on. I've seen horses pull things. The horse moves. The stone moves. Nobody's getting dragged backwards.
+
+NEWTON: The stretched rope tries to shorten itself, so it pulls the horse back as hard as it pulls the stone forward. It hinders the one as much as it helps the other. He feels the rope, I promise you. And the law holds in attractions too. The Earth pulls the stone, and the stone pulls the Earth. [principia-0026]
+
+RAM: Now join it up for me. How do you get from a falling stone to the Moon?
+
+NEWTON: Imagine a very small moon going round the Earth so low that it almost touches the tops of the highest mountains. The force keeping it in its orbit would be very nearly the weight of a stone on that mountain. Stop that moon in its course and it falls, like the stone. If the force holding it were something other than gravity, gravity would pull on it as well, and it would fall with both forces together. Therefore "this little moon at the top of a mountain must either be without gravity, or fall twice as swiftly as heavy bodies are wont to do." Neither is believable. So it is one force. [principia-0581]
+
+RAM: That's elegant. And this is the same force on everything? A feather, a cannonball?
+
+NEWTON: I tested it. "I tried the thing in gold, silver, lead, glass, sand, common salt, wood, water, and wheat." Two round wooden boxes, equal in size, hung on threads of eleven feet. One I filled with wood, and in the other I hung an equal weight of gold. "I observed them to play together forward and backward, for a long time, with equal vibrations." [principia-0585]
+
+RAM: Wheat. You put wheat in a pendulum.
+
+NEWTON: I was raised on a farm, Mr Ram. I had to get some use from it eventually.
+
+RAM: And the inverse square. In one sentence.
+
+NEWTON: Double the distance, and the pull is a quarter. But I will confess something. A planet's pull is made up of the pulls of all its parts, and near the surface those parts lie at very unequal distances. "I was yet in doubt whether that reciprocal duplicate proportion did accurately hold, or but nearly so". I had to prove it before I believed it, and I did. [principia-0592]
+
+RAM: Here's the misconception. A lot of people watching think you explained what gravity actually is. You found it, you named it, case closed.
+
+NEWTON: Then they have read me more generously than I wrote. In a later edition of the Principia I said it plainly: "Hitherto we have explained the phænomena of the heavens and of our sea by the power of gravity, but have not yet assigned the cause of this power." I know how it acts, and its measure. What it is, I do not know. "But hitherto I have not been able to discover the cause of those properties of gravity from phænomena, and I frame no hypotheses". [principia-0783]
+
+RAM: But surely you had a guess.
+
+NEWTON: I had questions. In the Opticks I wrote: "What I call Attraction may be perform'd by impulse, or by some other means unknown to me." It is a word for the effect, not the cause. I put my thoughts on the cause as a question, because I am not yet satisfied about it, for want of experiments. [opticks-0320, opticks-0002]
+
+RAM: Let me push you. Leibniz said this was exactly your problem. That you were bringing back the old occult qualities. A pull nobody can explain, working across empty space.
+
+NEWTON: He mistook what I said. "For these are manifest Qualities, and their Causes only are occult." That bodies fall and planets keep their courses, anyone can see. The cause is hidden. To invent a hidden quality and call it an explanation is to tell us nothing. To find the law and leave the cause to be found is a great step. [brewster-0171, opticks-0341]
+
+RAM: Last one. Which idea of yours is underrated?
+
+NEWTON: The questions at the end of the Opticks. I meant to repeat my last experiments with more care. "But I was then interrupted, and cannot now think of taking these things into farther Consideration." So "I shall conclude with proposing only some Queries, in order to a farther search to be made by others." [opticks-0287]
+
+RAM: So you ended your book with homework.
+
+NEWTON: I ended it honestly. Whether the rays are small bodies. Whether particles have powers acting at a distance. Whether rays passing the edge of a body bend back and forth "with a motion like that of an Eel". [opticks-0287, opticks-0315, opticks-0320]
+
+RAM: Like an eel.
+
+NEWTON: I put it as a question, Mr Ram. I do not say the light is an eel.
+
+## Diamond, Locke and a very odd letter
+
+RAM: Let's talk about the people in your life. Who were your real friends?
+
+NEWTON: Dr. Halley first, for without him there is no Principia. I said so in the preface: "it was to his solicitations that its becoming public is owing". When I agreed to keep the title after all, I told him "It will help the sale of the book, which I ought not to diminish now ’tis yours." [principia-0002, brewster-0123]
+
+RAM: Was that a joke? Sir Isaac Newton making a joke about book sales?
+
+NEWTON: It happens about once a decade. You were fortunate in your timing.
+
+RAM: But you two didn't agree on everything.
+
+NEWTON: Not on religion. When Halley spoke lightly of it, I checked him. "I have studied these things,—you have not." He did not stop being my friend, and I did not stop correcting him. [brewster-0285]
+
+RAM: And Charles Montague. He's the one who got you to London.
+
+NEWTON: Montague was twenty years younger than I, a disciple more than an equal at first. In 1684 we tried to found a philosophical society at Cambridge together, and it failed for want of persons willing to try experiments. He rose fast: the Treasury, then Chancellor of the Exchequer. [brewster-0204]
+
+RAM: I read you fell out with him before the Mint job.
+
+NEWTON: I did. I believed he had failed me over an office I hoped for, and I wrote to Mr. Locke, "Being fully convinced that Mr. Montague, upon an old grudge which I thought had been worn out, is false to me, I have done with him". Some years later that same false friend made me Warden of the Mint. [brewster-0192, brewster-0206]
+
+RAM: So you'd "done with him", and he got you the job anyway.
+
+NEWTON: Yes. It does not show me in the best light. Write it down as an experiment that disproved my hypothesis.
+
+RAM: You never married. There was Miss Storey in Grantham, who you've already told us about. Was there anyone else?
+
+NEWTON: You will find no letter of mine on marriage, and I will not compose one now. Miss Storey married twice; I never did. I helped her with her small money troubles for the rest of my life. That is what I can tell you. [brewster-0004, chittenden-0003]
+
+RAM: In London, your niece Catherine Barton ran your house. What was she like?
+
+NEWTON: My niece, educated at my expense, and the widow of Colonel Barton. She kept my house for the last twenty years of my life, and she and her husband, Mr. Conduit, lived with me there. Lord Halifax, Montague as he became, was very attached to her. Why they never married I cannot say. In his will he left her a large part of his fortune, and he left me a hundred pounds. [brewster-0270, brewster-0208]
+
+RAM: A hundred pounds. Ouch.
+
+NEWTON: It was a just valuation. She was better company.
+
+RAM: I have to ask you about a story every schoolchild hears. You had a little dog called Diamond. You left him in your study, he knocked over a candle, and years of your work went up in flames. And you said, "Oh, Diamond, Diamond, little do you know the mischief you have done me!"
+
+NEWTON: I do not recognise the dog, Mr Ram, nor those words. There was talk of papers of mine burned by a candle on a winter morning while I was at chapel, and I do not deny that I lost papers in my life. But you will not find me speaking of experiments lost that way, then or after. A tale that grows a dog and a speech in the retelling is the kind of thing I was taught to distrust. [brewster-0177, brewster-0183]
+
+RAM: Then let's talk about something you did write. In September 1693 you sent two letters, one to Samuel Pepys and one to John Locke, that alarmed both of them.
+
+NEWTON: I know the ones you mean. To Mr. Pepys I wrote, "I am extremely troubled at the embroilment I am in, and have neither ate nor slept well this twelvemonth, nor have my former consistency of mind." And I told him I must withdraw from his acquaintance, and see neither him nor the rest of my friends any more. [brewster-0186]
+
+RAM: And to Locke?
+
+NEWTON: Worse. I had persuaded myself that he was working against me. I wrote, "Being of opinion that you endeavoured to embroil me with women, and by other means, I was so much affected with it, as that when one told me you were sickly and would not live, I answered, ’twere better if you were dead. I desire you to forgive me this uncharitableness". [brewster-0194]
+
+RAM: That's hard to hear. Can I ask what was happening to you?
+
+NEWTON: I can tell you what I told him a few weeks later. "The last winter, by sleeping too often by my fire, I got an ill habit of sleeping; and a distemper, which this summer has been epidemical, put me farther out of order, so that when I wrote to you, I had not slept an hour a night for a fortnight together, and for five days together not a wink." I remembered that I had written to him. I could not remember what I had said. [brewster-0198]
+
+RAM: Some people have read those letters and said you lost your mind.
+
+NEWTON: I lost my sleep. A man who has not slept for five nights is not himself, and he says things he must afterwards answer for. When I met Mr. Millington at Huntingdon, I told him before he could ask that I had written Mr. Pepys a very odd letter, and that I was ashamed of it. [brewster-0189]
+
+RAM: And what did Locke say?
+
+NEWTON: That he forgave me, freely and fully, and wished only for a chance to show me that nothing had changed between us. I signed my letter to him as his "most humble and unfortunate servant". I was both. He was the better man that autumn. [brewster-0194, brewster-0196]
+
+RAM: I think a lot of people watching this will find that the most human thing you've said today. The man who explained the heavens, asking a friend's pardon because he hadn't slept.
+
+NEWTON: The heavens are easier. They do not need to forgive you.
+
+RAM: And you went back to work?
+
+NEWTON: The next autumn I was at Greenwich taking Mr. Flamstead's observations of the Moon, though he treated my requests as if they were a nuisance to him. The Moon, at least, was willing. [brewster-0200]
+
+RAM: People call you a loner. Is that fair?
+
+NEWTON: I had friends and I lost some through my own fault. But if you ask what I wanted most, I told Mr. Locke once: "My inclinations are to sit still." [brewster-0192]
+
+## Lace, lucre and the ocean of truth
+
+RAM: Let's talk money. At fifty-three you were still living on a professor's salary. Then you go to the Mint, and eventually you're Master, on twelve or fifteen hundred pounds a year. Did money change you?
+
+NEWTON: It changed my house. In London I kept a carriage, three men servants and three women. I gave dinners when the occasion called for them. But I ate plainly and dressed plainly. My table was broth, vegetables and fruit. [brewster-0203, brewster-0207, brewster-0285, brewster-0270]
+
+RAM: Always plainly?
+
+NEWTON: Once, not. In 1705 I stood again for the University in Parliament, and I am said to have put on a suit of laced clothes for it. I had been knighted by the Queen at Trinity that same spring. I lost by a very great majority. [brewster-0285, brewster-0209]
+
+RAM: So the one time you dressed up, you got beaten.
+
+NEWTON: Badly. I have drawn no general law from it. One observation is not an induction.
+
+RAM: What did the Mint job actually involve?
+
+NEWTON: The coin of the nation had been clipped and debased, and Montague resolved to make it all again. My mathematics and my knowledge of chymistry were of use, and the whole recoinage was done in two years. Later I wrote a report on the coinage and drew up a table of the assays of foreign coins. [brewster-0204, brewster-0207]
+
+RAM: And the professorship?
+
+NEWTON: When I became Master, I made Mr. Whiston my deputy at Cambridge, and gave him all the money from the chair. In 1703 I resigned it and got him appointed in my place. [brewster-0207]
+
+RAM: Your friends say you gave money away constantly.
+
+NEWTON: To my relations, a great deal, and to the poor, and to learning. When I was past eighty I offered twenty pounds a year toward a place for young Mr. Maclaurin at Edinburgh. I used to say that those who give nothing away until they die have never really given at all. A legacy costs the giver nothing. [brewster-0286]
+
+RAM: That's a good line. I want to push you on something, though. You say you hated disputes. You sat on the Opticks for years.
+
+NEWTON: "To avoid being engaged in Disputes about these Matters, I have hitherto delayed the printing, and should still have delayed it, had not the Importunity of Friends prevailed upon me." [opticks-0000]
+
+RAM: But when Leibniz said you'd copied him, you went to war. For people watching: you and Leibniz both developed what we now call calculus. You called it fluxions. Leibniz said you didn't have his method before him. Historians today generally say you both found it independently. And some historians say you had a bigger hand in the Royal Society's report on the dispute than you let on.
+
+NEWTON: I said before the Society that I did not interfere in that publication, and that I held back two letters which favoured me. I stand on what I said then. I did not answer him in my own name at all until the King himself asked when my answer would appear. And then I wrote, "But he is the aggressor, and it lies upon him to prove the charge." [brewster-0170, brewster-0171]
+
+RAM: That doesn't sound like a man who values his quiet.
+
+NEWTON: A man may love his quiet and still not let himself be called a thief. He accused me of plagiary. That is a charge against my honesty, not my mathematics. On the mathematics, I published what I had tried, and left the rest to others. [brewster-0171, opticks-0000]
+
+RAM: So what actually made you happy? Not money, not winning.
+
+NEWTON: I never wrote down a rule for happiness, so I will not pretend to one. I can tell you what I valued. My quiet. And the work itself. "And though every true Step made in this Philosophy brings us not immediately to the Knowledge of the first Cause, yet it brings us nearer to it, and on that account is to be highly valued." [brewster-0041, opticks-0315]
+
+RAM: Your household said you'd sit on the edge of your bed for hours in the morning without getting dressed.
+
+NEWTON: Thinking. And they had to remind me to eat. People called it genius. I always said that whatever I had done for the public was owing to no extraordinary sagacity, only to industry and patient thought. [brewster-0286, brewster-0277]
+
+RAM: There's a line of yours, from near the end of your life. A lot of people watching this will know it.
+
+NEWTON: The boy on the shore. I said it to someone, not long before I died, and I still mean it. I do not know how I look to the world. To myself I seem only a boy playing by the sea, pleased now and then to find a smoother pebble or a prettier shell than the others, "while the great ocean of truth lay all undiscovered before me." [brewster-0284]
+
+RAM: That might be the humblest thing anyone famous has ever said.
+
+NEWTON: It is not humility. It is measurement. Set what I found beside what is left to find, and see how small the one is.
+
+RAM: Last thing. A young person starting their career today. What do you tell them?
+
+NEWTON: What I told young Mr. Aston when I was twenty-six and he was setting out on his travels. "You will find little or no advantage in seeming wiser or much more ignorant than your company." And, "If you bee affronted, it is better, in a forraine country, to pass it by in silence, and with a jest, though with some dishonour, than to endeavour revenge". [brewster-0303]
+
+RAM: With respect, Sir Isaac, you did not follow that advice. Hooke. Leibniz.
+
+NEWTON: No. It is easier to advise a traveller than to be one. But the rule was sound, even if the man who wrote it was not always. "In a word, if you can keep reason above passion, that and watchfullnesse will be your best defendants." [brewster-0303]
+
+RAM: Anything else from that letter?
+
+NEWTON: I told him to watch for metals changed into other metals in the mines abroad, those being "the most luciferous, and many times lucriferous experiments too, in philosophy." [brewster-0304]
+
+RAM: Translate that for me.
+
+NEWTON: Light-bringing, and money-bringing. Look first for the work that shows you something. Sometimes it pays as well. Rarely the other way round.
+
+RAM: Light first, money second. I like that. Next, I'm going to throw some of our world at you, fast. And for anyone who's just tuned in: my guest is an AI recreation of Sir Isaac Newton, built from his own writings and a biography of his life.
 
 ## Hot takes on today
 
