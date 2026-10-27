@@ -256,7 +256,7 @@ RAM: And after that, you leave Cambridge altogether.
 
 NEWTON: For more than twenty-five years I had scarcely left my college more than a few weeks a year. Then my friend Charles Montague, the Chancellor of the Exchequer, had me made Warden of the Mint, and later I was Master. I went to London. [brewster-0175, brewster-0206, brewster-0207]
 
-RAM: A quick reminder for anyone just joining us: my guest is an AI recreation of Sir Isaac Newton, built from his own writings and a biography of his life. Sir Isaac, did you miss the quiet?
+RAM: From a college room to the Mint in London. Sir Isaac, did you miss the quiet?
 
 NEWTON: Montague promised me the office had not too much business. He was a fine statesman, Mr Ram, but on that point he was mistaken. I could not even find leisure to prepare a new edition of the Principia. But we will come to the Mint. [brewster-0206, brewster-0210]
 
@@ -488,8 +488,138 @@ NEWTON: Light-bringing, and money-bringing. Look first for the work that shows y
 
 RAM: Light first, money second. I like that. Next, I'm going to throw some of our world at you, fast. And for anyone who's just tuned in: my guest is an AI recreation of Sir Isaac Newton, built from his own writings and a biography of his life.
 
-## Hot takes on today
+## Clocks, comets and the end of the world
 
-## Regrets and legacy
+RAM: First one. You sat on the government committee about finding longitude at sea. Today, the phone in my pocket knows where I am on the Earth to within a few feet. It does it by listening to clocks circling overhead.
 
-## The last question
+NEWTON: Clocks. Then you solved the watch. In 1714 I told the committee of the Commons that a watch to keep time exactly at sea, with the ship rolling, the heat and cold, the wet and dry, and gravity itself different from one latitude to another, "such a watch hath not yet been made." [brewster-0215]
+
+RAM: Someone made it. A clockmaker, a few decades after your death. And now the clocks are so good we put them in the sky.
+
+NEWTON: I am glad to be wrong in that direction. I said "hath not yet", you will notice. Not never. [brewster-0215]
+
+RAM: Here's a harder one. Nearly two hundred years after you, a man called Einstein showed that your laws aren't quite right. At enormous speeds, or near enormous masses, they drift off. We still use your laws to fly to the Moon. But at the edges, they've been replaced. Does that sting?
+
+NEWTON: Let me read you the fourth of my Rules of Reasoning, and you may judge whether I left the door open. "In experimental philosophy we are to look upon propositions collected by general induction from phænomena as accurately or very nearly true, notwithstanding any contrary hypotheses that may be imagined, till such time as other phænomena occur, by which they may either be made more accurate, or liable to exceptions." [principia-0566]
+
+RAM: So you wrote your own get-out clause.
+
+NEWTON: I wrote the method. Induction "be no Demonstration of general Conclusions; yet it is the best way of arguing which the Nature of Things admits of". If observation has found exceptions, the law must now be spoken with exceptions. I said in my preface I hoped my principles would give "some light either to this or some truer method of philosophy." It seems they did. [opticks-0344, principia-0002]
+
+RAM: Okay. Here's the surprise topic. If you search your name online, one of the first things you'll find is the claim that Isaac Newton predicted the world will end in 2060. Did you?
+
+NEWTON: I have no notion where your century found that number, and I will not do sums to please it. Hear what I wrote about men who set dates. "The folly of Interpreters has been, to foretel times and things by this Prophecy, as if God designed to make them Prophets. By this rashness they have not only exposed themselves, but brought the Prophecy also into contempt." [daniel-0179]
+
+RAM: But you spent years on the prophecies. Surely you wanted to know when.
+
+NEWTON: God gave the prophecies "not to gratify men's curiosities by enabling them to foreknow things, but that after they were fulfilled they might be interpreted by the event". Where a prophecy was not yet fulfilled, I refused to interpret it. "The manner I know not. Let time be the Interpreter." [daniel-0179, daniel-0092]
+
+RAM: So the man the internet says set a date for the end of the world wrote that date-setting is folly.
+
+NEWTON: In print. Before witnesses. Though I will make you a confession. Toward the end, sitting by a wood fire at Kensington, my nephew Mr. Conduit had me talking about the comet of 1680. It passed so near the sun that it must be slowed, and I had written that it "will at last fall down upon the body of the sun." [principia-0775, brewster-0307]
+
+RAM: And then what?
+
+NEWTON: I told him, as a conjecture, and affirming nothing, that when it falls it may so heat the sun that this earth would be burnt and nothing living could survive on it. When, I could not say. Perhaps five or six more revolutions. Mr. Conduit asked why I would not publish my conjectures, as Kepler did. I told him, "I do not deal in conjectures." [brewster-0307, brewster-0309]
+
+RAM: Right after giving him a conjecture about the end of the world.
+
+NEWTON: He noticed that too. I told him I had said enough for people to know my meaning, and I laughed. A man is allowed one inconsistency by his own fireside. [brewster-0309]
+
+RAM: Next. Many people today think science has made God unnecessary. You explained the heavens with mathematics, so what's left for Him to do?
+
+NEWTON: They have read the first half of my book and not the end. "This most beautiful system of the sun, planets, and comets, could only proceed from the counsel and dominion of an intelligent and powerful Being." "Was the Eye contrived without Skill in Opticks, and the Ear without Knowledge of Sounds?" [principia-0779, opticks-0315]
+
+RAM: But you've just told me your laws stand only until better evidence comes. Why doesn't that apply to God?
+
+NEWTON: A fair push. I reasoned to Him from the appearances of things, as I reasoned to gravity. To discourse of God "from the appearances of things, does certainly belong to Natural Philosophy." Your century may weigh the argument. It may not tell me it does not belong in the book. [principia-0783]
+
+RAM: Last one, and I think you'll like it. We've now found thousands of planets going round other stars.
+
+NEWTON: Thousands. I took the fixed stars to be suns, giving light to other planets as ours does to us. In the Opticks I said God might vary the laws of Nature, "and make Worlds of several sorts in several Parts of the Universe. At least, I see nothing of Contradiction in all this." [brewster-0308, opticks-0344]
+
+RAM: So you called it.
+
+NEWTON: I did not call it. I said it was not contradictory. Your astronomers did the observing. Have they found anyone living on them?
+
+RAM: Not yet.
+
+NEWTON: Then they are wise to say so. Let time be the Interpreter there also.
+
+## Left imperfect
+
+RAM: Let's slow down. You've told me what you got right. What did you leave undone?
+
+NEWTON: The third book of the Opticks, to begin with. I said so in the front of it. "The Subject of the Third Book I have also left imperfect, not having tried all the Experiments which I intended when I was about these Matters". I had "only begun the Analysis", and left the hints to be improved "by the farther Experiments and Observations of such as are inquisitive." [opticks-0000, opticks-0345]
+
+RAM: And the cause of gravity, which you've already told us you never found.
+
+NEWTON: That, and a thing I suspected beneath it. At the end of the Principia I wrote of "a certain most subtle Spirit which pervades and lies hid in all gross bodies". Then I stopped, because "nor are we furnished with that sufficiency of experiments which is required to an accurate determination and demonstration of the laws by which this electric and elastic Spirit operates." [principia-0784]
+
+RAM: Electric. You wrote electric?
+
+NEWTON: I did. Why does that make you smile?
+
+RAM: Because almost everything in our world now runs on electricity. You walked right up to the door and decided not to knock.
+
+NEWTON: I had not the experiments to knock with. I would sooner leave a door shut than describe a room I had never seen.
+
+RAM: Here's my push. You told us earlier you were only a boy picking up pebbles. But you also fought Hooke and Leibniz over who got there first. That isn't how a man who doesn't care about credit behaves.
+
+NEWTON: I never said I did not care. I said what I had found was small beside what was left. As to how I wished to be read, it is in the preface to the Principia: "I heartily beg that what I have here done may be read with candour; and that the defects in a subject so difficult be not so much reprehended as kindly supplied, and investigated by new endeavours of my readers." Fix my defects; do not merely sneer at them. [principia-0002]
+
+RAM: Can I ask about your last years?
+
+NEWTON: You may. At eighty I was told I had the stone, and that it could not be cured. I gave up my carriage for a chair and declined all dinners. After a bad cough they moved me to Kensington, with some difficulty, and it did me good. [brewster-0270]
+
+RAM: But you kept going into London.
+
+NEWTON: At the end of February 1727 I went up to preside at the Royal Society. I told my nephew I had slept the night through, from eleven till eight. It was a boast I paid for. The pain came back violently, and by the fourth of March I was at Kensington again, and Dr. Mead and Dr. Cheselden gave no hope. [brewster-0271]
+
+RAM: Your nephew's account says that in the worst of it, with the sweat running down your face, you never cried out or complained. And between the fits you smiled and talked.
+
+NEWTON: Complaining does not dissolve a stone. On the Saturday I read the newspapers and had a long talk with Dr. Mead. After that I have nothing to tell you. You will have to tell me. [brewster-0271]
+
+RAM: You died on the twentieth of March, 1727, and you were buried in Westminster Abbey, with the Lord Chancellor, two dukes and three earls carrying the pall. There's a monument, with carved boys holding your discoveries: a prism, a reflecting telescope, the sun and planets weighed on a scale, a furnace, and coins fresh from the Mint.
+
+NEWTON: The coins. Of course they put the Mint on it. Thirty years of my life, and two stone boys carrying it. That is about right. [brewster-0272]
+
+RAM: And on the wall of the room where you were born, someone later put two lines of verse. "Nature and Nature's Laws were hid in night, God said, 'Let NEWTON be,' and all was light."
+
+NEWTON: That is a line which belongs to God, given to a man. I would have struck it out. And it rhymes, which does not help its case with me. [chittenden-0062]
+
+## The question from the fire
+
+RAM: Every guest on this show leaves a question for the next one, without knowing who'll answer it. Our last guest was Adam Smith, and here is what he left for you. "Was there something you left unfinished? And if your friends offered to save it from the fire, would you let them?"
+
+NEWTON: Mr. Smith asks the right man. You have just heard my unfinished things. The largest of the rest was my Chronology of the ancient kingdoms. Critics in France attacked it, and my friends prevailed on me to prepare the whole for the press. I had nearly finished it. [brewster-0222]
+
+RAM: And would you let them save it?
+
+NEWTON: I have been saved from myself twice already, as you have heard. Dr. Halley would not let me cut the third book of the Principia, and my friends would not let me sit on the Opticks for ever. Both times they were right. [brewster-0124, opticks-0000]
+
+RAM: So the answer is yes.
+
+NEWTON: Not always. Once I stopped a friend from saving me. I had written a tract on two corrupted texts of Scripture, and Mr. Locke sent it to Holland to be printed without my name. When I heard it was going ahead, I wrote to him: "Let me entreat you to stop their translation and impression so soon as you can; for I design to suppress them." I was afraid of being drawn into another controversy. [brewster-0230, brewster-0231]
+
+RAM: So which Newton should Adam Smith believe?
+
+NEWTON: Both. I would let them save what was finished and true. What was half-done I would rather they kept back. "If any other Papers writ on this Subject are got out of my Hands they are imperfect". But if what I wrote may help those who come after, then as I said of my work on the prophecies, "if I have done any thing which may be useful to following writers, I have my design." [opticks-0000, brewster-0237]
+
+RAM: For what it's worth, nobody burned your papers. Most of them passed down through your family, and they were kept.
+
+NEWTON: Then my friends had their way in the end. They usually did.
+
+RAM: One piece of advice for everyone watching.
+
+NEWTON: The first of my Rules. "Nature is pleased with simplicity, and affects not the pomp of superfluous causes." When something goes wrong in your life, do not reach first for the grand explanation, the conspiracy or the curse. Look for the plain cause that is true and sufficient. It is usually there. [principia-0562]
+
+RAM: That's good. Now, your question for our next guest. You don't know who it is.
+
+NEWTON: I ended the Opticks by handing my questions to strangers, so I am used to this. Here is mine, built on my fourth Rule. What did you once believe on good evidence that later evidence proved false, and how long did it take you to admit it? I will answer first, to be fair, though mine runs the other way. I once put aside a true idea because of a false measurement of the Earth, and it was years before better evidence made me take it out again. [principia-0566, brewster-0116, brewster-0118]
+
+RAM: Sir Isaac Newton, thank you. This has been an honour.
+
+NEWTON: You asked more than you asserted, Mr Ram. I advised the same to a traveller once. Thank you.
+
+RAM: That's our show. My guest was an AI recreation of Sir Isaac Newton, built from his own writings and a biography of his life, and every source is listed in the description. I'm Ram, and this has been The Deadman Show.
