@@ -16,7 +16,7 @@ Beats:
 4. A lot of people think you explained what gravity *is*. Did you? (principia-0783, principia-0565, opticks-0002, opticks-0320, opticks-0341)
 5. And the apple: did it hit you on the head? (brewster-0289, chittenden-0061, brewster-0115, chittenden-0007)
 6. You put a prism in a dark room and broke white light into colours. What exactly did you see, and how did the second prism prove it? (opticks-0032, -0033, -0047, -0048, -0118; brewster-0017, -0018)
-7. Your "Rules of Reasoning" sound like advice for anyone. What are they, and why does Nature "affect not the pomp of superfluous causes"? (principia-0562 to -0566)
+7. Your "Rules of Reasoning" sound like advice for anyone. What are they, and why does Nature "affects not the pomp of superfluous causes"? (principia-0562 to -0566)
 8. Underrated idea: at the end of the Opticks you left a list of open questions (the Queries) about particles, attractions and method. Why end a book with questions? (opticks-0287, -0320, -0340, -0344, -0345)
 
 ## Passages
@@ -72,7 +72,7 @@ Queries (end of Opticks)
 - opticks-0002 (primary, Advertisement II, 1717): he added a Query about gravity's cause "to shew that I do not take Gravity for an essential Property of Bodies".
 
 Misconceptions
-- brewster-0289 (biography, ch. XIX, Woolsthorpe memorials) and chittenden-0061: the only apple in the sources: "The celebrated apple-tree, the fall of one of the apples of which is said to have turned the attention of Newton to the subject of gravity", destroyed by wind and preserved as a chair. "Is said to have" = tradition, not attested. Nothing about it hitting his head.
+- brewster-0289 (biography, ch. XIX, Woolsthorpe memorials) and chittenden-0061: the only apple in the sources: "The celebrated apple-tree, the fall of one of the apples of which is said to have turned the attention of Newton to the subject of gravity", destroyed by wind and preserved as a chair. "is said to have" = tradition, not attested. Nothing about it hitting his head.
 - brewster-0240 to -0245 (biography, ch. XVI): letters to Bentley 1692-93: innate gravity and the need for a Deity. Mostly Brewster's paraphrase; the double-quoted passages are Newton's words (see quotes). Note brewster-0241's opening quote is in the third person ("he had an eye upon ...") so it is not Newton's verbatim wording.
 - brewster-0171 (biography, ch. XII): Leibnitz accused him of "reviving the occult qualities" and objected "that each particle of matter attracts every other particle". Useful as the contemporary objection the guest answers with opticks-0341.
 

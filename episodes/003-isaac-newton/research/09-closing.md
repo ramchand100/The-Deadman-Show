@@ -59,6 +59,8 @@ Friends saving (or not saving) his work
 - brewster-0231 (biography): Newton's letter to Locke, Cambridge, 16 Feb 1691-2 (date from brewster-0230): "I design to suppress them" etc. Newton's words.
 - brewster-0232 (biography): Le Clerc stopped it, deposited Locke's copy in the Remonstrants' library; published only in 1754, imperfectly, as "Two letters from Sir Isaac Newton to M. Le Clerc,—a form which had never been given to it by its author".
 - chittenden-0036 (biography): Observations upon the Prophecies first published 1733 (after his death).
+- brewster-0237 (biography, Ch. XVI): Newton's own words from the prophecy work, on why he wrote it: "if I have done any thing which may be useful to following writers, I have my design." A good closing line for "would you let them save it?": the work was meant for those who come after.
+- brewster-0239 (biography, Ch. XVI): Newton's letter-tract on the corrupted texts: "There cannot be better service done to the truth than to purge it of things spurious". Also could serve as advice.
 
 His papers after death (host may tell him; he cannot know)
 - brewster-0290 (biography, Ch. XIX): Cotes correspondence and part of the Principia manuscript at Trinity; ~34 letters to Flamstead at Corpus Christi, Oxford; some at Shirburn Castle (Lord Macclesfield); "the great mass of Newton's papers came into the possession of the Portsmouth family through his niece, Lady Lymington"; Brewster (1831) believes they contain "nothing which could be peculiarly interesting to science" and hopes they will be published. (Nobody burned them.)
@@ -95,6 +97,8 @@ Biography (Newton's own words reproduced by the biographer):
 - brewster-0041 (letter to Leibnitz, 1675): "I blamed my own imprudence for parting with so substantial a blessing as my quiet to run after a shadow."
 - chittenden-0057 (recorded saying): "while the great ocean of truth lay all undiscovered before me."
 - brewster-0309 (recorded saying, to Conduit): "I do not deal in conjectures."
+- brewster-0237 (Newton's words, quoted by Brewster): "The success of others," ... "put me upon considering it, and if I have done any thing which may be useful to following writers, I have my design." (Brewster breaks it with "he continues"; quote the part after it: "put me upon considering it, and if I have done any thing which may be useful to following writers, I have my design.")
+- brewster-0239 (Newton's letter-tract, quoted by Brewster): "There cannot be better service done to the truth than to purge it of things spurious"
 
 Not Newton's words (memory/paraphrase only):
 - chittenden-0050: "who gave away nothing till they died, never gave at all" (reported, unquoted in source).
@@ -106,8 +110,9 @@ Not Newton's words (memory/paraphrase only):
 - **No passage records Newton asking for papers to be burned, or burning them himself,** and nothing about friends offering to save anything from a fire at his death. The only fire is the Diamond accident (and Huygens's hearsay of a lost laboratory). Do not invent a deathbed burning or instructions to destroy manuscripts.
 - **Diamond is shaky:** Brewster notes Newton never mentions the lost experiments and Conduit never mentions the fire; the two biographies quote the exclamation differently. Newton can tell it as a memory, but the writer might let him be wry about it rather than build the answer on it.
 - **What happened to his papers** after 1727 (Portsmouth family, Brewster's hope of publication) is after his death: host material only. Later history (the 1936 Sotheby's sale, Keynes, the theological and alchemical manuscripts becoming known) is NOT in our sources; the host may mention it only as a general, attributed claim and should flag it.
-- **His private theology** (anti-Trinitarian views) is not described in these passages; Brewster gives only the title "Historical Account of two notable Corruptions of Scripture" and the story of its suppression. Do not say what the "corruptions" were beyond what brewster-0237/0239 summarise (not read in full here; the writer should check them before using).
+- **His private theology:** brewster-0237/0239 summarise the "Corruptions of Scripture" tract (1 John v. 7 and 1 Tim. iii. 16 as corrupted texts). Brewster says he "has been regarded as an Antitrinitarian" but that this "is not warranted by any thing which he has published", and records that Newton was "greatly offended" when Whiston called him an Arian and kept Whiston out of the Royal Society. Brewster's defence of his orthodoxy is the biographer's opinion. Do not have Newton declare anti-Trinitarian views; the sources do not give them to him.
 - **Alchemy** appears only second-hand (brewster-0254, brewster-0178). Not enough for him to "confess" alchemical papers.
 - **"Shoulders of giants"** is not in the indexed texts.
 - **No piece of explicit advice to young people** exists in his own writings; the advice must be built from Rule IV / Query 31, the reported "industry and patient thought", and the reported saying on giving.
+- **Overlap:** Diamond is in 05-personal and the "litigious lady" letter is in 03/05/06. In 09, refer back to them briefly ("you've heard about my dog") rather than retelling. 06-life (Q8) uses Newton's rules for travelling abroad (brewster-0302 onward) as advice for young people; I did not research that passage. If 06 uses it, 09's advice should come from a different source (Rule IV, patient thought, or giving while alive).
 - The question for the next guest is the writer's composition; the ideas above are anchored to passages but no source contains such a question.
